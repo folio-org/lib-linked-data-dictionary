@@ -1,7 +1,5 @@
 package org.folio.ld.dictionary;
 
-import lombok.Getter;
-
 public enum ResourceType {
   ANNOTATION("http://bibfra.me/vocab/lite/Annotation", -2716756821684516448L),
   CARRIER("http://bibfra.me/vocab/marc/Carrier", 421212736624329420L),
@@ -27,10 +25,8 @@ public enum ResourceType {
   VARIANT_TITLE("http://bibfra.me/vocab/marc/VariantTitle", 4846800426734929825L),
   WORK("http://bibfra.me/vocab/lite/Work", -3114907246856331309L);
 
-  @Getter
-  private final String uri;
-  @Getter
-  private final Long hash;
+  public final String uri;
+  public final Long hash;
 
   ResourceType(String uri, Long hash) {
     this.uri = uri;
