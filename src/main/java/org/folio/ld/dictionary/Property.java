@@ -1,5 +1,8 @@
 package org.folio.ld.dictionary;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public final class Property {
 
   public static final String ASSIGNING_SOURCE = "http://bibfra.me/vocab/marc/localIdAssigningSource";
@@ -35,6 +38,4 @@ public final class Property {
   public static final String TERM = "http://bibfra.me/vocab/marc/term";
   public static final String VARIANT_TYPE = "http://bibfra.me/vocab/marc/variantType";
 
-  private Property() {
-  }
 }

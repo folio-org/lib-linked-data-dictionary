@@ -1,6 +1,10 @@
 package org.folio.ld.dictionary;
 
-public enum ResourceType {
+import lombok.Getter;
+import org.folio.ld.dictionary.api.ResourceType;
+
+@Getter
+public enum ResourceTypeDictionary implements ResourceType {
   ANNOTATION("http://bibfra.me/vocab/lite/Annotation", -2716756821684516448L),
   CARRIER("http://bibfra.me/vocab/marc/Carrier", 421212736624329420L),
   CATEGORY("http://bibfra.me/vocab/lite/Category", -7237503330348194663L),
@@ -25,10 +29,10 @@ public enum ResourceType {
   VARIANT_TITLE("http://bibfra.me/vocab/marc/VariantTitle", 4846800426734929825L),
   WORK("http://bibfra.me/vocab/lite/Work", -3114907246856331309L);
 
-  public final String uri;
-  public final Long hash;
+  private final String uri;
+  private final Long hash;
 
-  ResourceType(String uri, Long hash) {
+  ResourceTypeDictionary(String uri, Long hash) {
     this.uri = uri;
     this.hash = hash;
   }

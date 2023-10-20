@@ -1,6 +1,10 @@
 package org.folio.ld.dictionary;
 
-public enum Predicate {
+import lombok.Getter;
+import org.folio.ld.dictionary.api.Predicate;
+
+@Getter
+public enum PredicateDictionary implements Predicate {
   ACCESS_LOCATION("http://bibfra.me/vocab/marc/accessLocation", -7597340833248531885L),
   CARRIER("http://bibfra.me/vocab/marc/carrier", -8262298498902758692L),
   CLASSIFICATION("http://bibfra.me/vocab/lite/classification", 554014919457463261L),
@@ -21,10 +25,10 @@ public enum Predicate {
   STATUS("http://bibfra.me/vocab/marc/status", -6334780726339225629L),
   TITLE("http://bibfra.me/vocab/marc/title", 5549969427228480763L);
 
-  public final String uri;
-  public final Long hash;
+  private final String uri;
+  private final Long hash;
 
-  Predicate(String uri, Long hash) {
+  PredicateDictionary(String uri, Long hash) {
     this.uri = uri;
     this.hash = hash;
   }
