@@ -37,7 +37,6 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <optional>true</optional>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -117,8 +116,7 @@
                 </executions>
             </plugin>
 
-            <!-- to be activated together with specification of repository to be uploaded to
-                <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven-deploy-plugin.version}</version>
@@ -131,7 +129,24 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>folio-eis-</id>
+            <name>FOLIO EIS Snapshot Repository</name>
+            <uniqueVersion>true</uniqueVersion>
+            <url>https://eis.jfrog.io/artifactory/libs-snapshot-local</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+        <url>https://github.com/FOLIO-EIS/ld-dictionary</url>
+        <connection>scm:git:git://github.com/folio-eis/ld-dictionary</connection>
+        <developerConnection>scm:git:git@github.com:folio-eis/ld-dictionary.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 </project>
