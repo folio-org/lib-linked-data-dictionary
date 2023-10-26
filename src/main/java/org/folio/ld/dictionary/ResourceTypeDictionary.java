@@ -10,6 +10,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   CATEGORY("http://bibfra.me/vocab/lite/Category", -7237503330348194663L),
   COPYRIGHT_EVENT("http://bibfra.me/vocab/lite/CopyrightEvent", 7138672891049112604L),
   FAMILY("http://bibfra.me/vocab/lite/Family", -1114722094452060721L),
+  IDENTIFIER("http://bibfra.me/vocab/lite/Identifier", 8535666185887263660L),
   ID_EAN("http://bibfra.me/vocab/identifier/Ean", 219046076164824264L),
   ID_ISBN("http://library.link/identifier/ISBN", 3962988838506018431L),
   ID_LCCN("http://library.link/identifier/LCCN", -5891299401617387451L),
