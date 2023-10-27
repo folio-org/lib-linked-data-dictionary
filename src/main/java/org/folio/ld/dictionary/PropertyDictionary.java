@@ -28,7 +28,6 @@ public enum PropertyDictionary {
   PROJECTED_PROVISION_DATE("http://bibfra.me/vocab/bflc/projectedProvisionDate"),
   PROVIDER_DATE("http://bibfra.me/vocab/lite/providerDate"),
   QUALIFIER("http://bibfra.me/vocab/marc/qualifier"),
-  STATEMENT_OF_RESPONSIBILITY("http://bibfra.me/vocab/marc/statementOfResponsibility"),
   RESPONSIBILITY_STATEMENT("http://bibfra.me/vocab/marc/responsibilityStatement"),
   SIMPLE_PLACE("http://bibfra.me/vocab/lite/place"),
   SOURCE("http://bibfra.me/vocab/marc/source"),
