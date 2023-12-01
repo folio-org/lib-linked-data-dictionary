@@ -1,6 +1,14 @@
 .idea/
 *.iml
 
+node_modules/
+/target
+
+.settings/
+.classpath
+.project
+.factorypath
+
 # Compiled class file
 *.class
 
