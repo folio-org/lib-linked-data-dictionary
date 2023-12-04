@@ -23,6 +23,7 @@ public enum PredicateDictionary implements Predicate {
   PLACE("http://bibfra.me/vocab/lite/place", -2442655877067158195L),
   PROVIDER_PLACE("http://bibfra.me/vocab/lite/providerPlace", -5991192843515972558L),
   STATUS("http://bibfra.me/vocab/marc/status", -6334780726339225629L),
+  SUPPLEMENTARY_CONTENT("http://bibfra.me/vocab/marc/supplementaryContent", 3590710019304603200L),
   TITLE("http://bibfra.me/vocab/marc/title", 5549969427228480763L);
 
   private final String uri;

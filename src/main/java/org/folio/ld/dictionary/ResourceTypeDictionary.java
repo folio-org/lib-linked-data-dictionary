@@ -26,6 +26,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   PLACE("http://bibfra.me/vocab/lite/Place", 7862842856693929565L),
   PROVIDER_EVENT("http://bibfra.me/vocab/lite/ProviderEvent", -1414513180123539856L),
   STATUS("http://bibfra.me/vocab/marc/Status", -5546355039147771611L),
+  SUPPLEMENTARY_CONTENT("http://bibfra.me/vocab/marc/SupplementaryContent", 3849426639441431097L),
   TITLE("http://bibfra.me/vocab/marc/Title", 1422402142581052159L),
   VARIANT_TITLE("http://bibfra.me/vocab/marc/VariantTitle", 4846800426734929825L),
   WORK("http://bibfra.me/vocab/lite/Work", -3114907246856331309L);
