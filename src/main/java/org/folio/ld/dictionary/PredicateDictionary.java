@@ -6,6 +6,8 @@ import org.folio.ld.dictionary.api.Predicate;
 @Getter
 public enum PredicateDictionary implements Predicate {
   ACCESS_LOCATION("http://bibfra.me/vocab/marc/accessLocation", -7597340833248531885L),
+  ASSIGNEE("http://bibfra.me/vocab/relation/assignee", 7405418968762623881L),
+  AUTHOR("http://bibfra.me/vocab/relation/author", -6596442569246316195L),
   CARRIER("http://bibfra.me/vocab/marc/carrier", -8262298498902758692L),
   CLASSIFICATION("http://bibfra.me/vocab/lite/classification", 554014919457463261L),
   CONTENT("http://bibfra.me/vocab/marc/content", -8400837019789777596L),
