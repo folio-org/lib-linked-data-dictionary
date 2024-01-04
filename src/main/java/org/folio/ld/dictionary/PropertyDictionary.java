@@ -1,5 +1,7 @@
 package org.folio.ld.dictionary;
 
+import java.util.Arrays;
+import java.util.Optional;
 import lombok.Getter;
 
 @Getter
@@ -79,5 +81,11 @@ public enum PropertyDictionary {
 
   PropertyDictionary(java.lang.String value) {
     this.value = value;
+  }
+
+  public static Optional<PropertyDictionary> fromValue(String value) {
+    return Arrays.stream(PropertyDictionary.values())
+      .filter(property -> property.getValue().equals(value))
+      .findFirst();
   }
 }
