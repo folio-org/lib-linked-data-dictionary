@@ -1,5 +1,7 @@
 package org.folio.ld.dictionary;
 
+import java.util.Arrays;
+import java.util.Optional;
 import lombok.Getter;
 import org.folio.ld.dictionary.api.Predicate;
 
@@ -356,6 +358,12 @@ public enum PredicateDictionary implements Predicate {
   PredicateDictionary(String uri, Long hash) {
     this.uri = uri;
     this.hash = hash;
+  }
+
+  public static Optional<PredicateDictionary> fromUri(String uri) {
+    return Arrays.stream(PredicateDictionary.values())
+      .filter(predicate -> predicate.getUri().equals(uri))
+      .findFirst();
   }
 
 }
