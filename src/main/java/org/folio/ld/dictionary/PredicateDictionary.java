@@ -362,7 +362,7 @@ public enum PredicateDictionary implements Predicate {
 
   public static Optional<PredicateDictionary> fromUri(String uri) {
     return Arrays.stream(PredicateDictionary.values())
-      .filter(predicate -> predicate.getUri().equals(uri))
+      .filter(predicate -> uri.equals(predicate.getUri()))
       .findFirst();
   }
 
