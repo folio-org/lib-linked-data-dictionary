@@ -9,7 +9,9 @@ public enum PropertyDictionary {
 
   ACCESSIBILITY_NOTE("http://bibfra.me/vocab/marc/accessibilityNote"),
   ADDITIONAL_PHYSICAL_FORM("http://bibfra.me/vocab/marc/additionalPhysicalForm"),
+  AFFILIATION("http://bibfra.me/vocab/scholar/affiliation"),
   ASSIGNING_SOURCE("http://bibfra.me/vocab/marc/localIdAssigningSource"),
+  ATTRIBUTION("http://bibfra.me/vocab/marc/attribution"),
   AUTHORITY_LINK("http://bibfra.me/vocab/lite/authorityLink"),
   BIBLIOGRAPHY_NOTE("http://bibfra.me/vocab/marc/bibliographyNote"),
   CHRONOLOGICAL_SUBDIVISION("http://bibfra.me/vocab/marc/chronologicalSubdivision"),
@@ -57,8 +59,10 @@ public enum PropertyDictionary {
   MATERIALS_SPECIFIED("http://bibfra.me/vocab/marc/materialsSpecified"),
   MISC_INFO("http://bibfra.me/vocab/marc/miscInfo"),
   NAME("http://bibfra.me/vocab/lite/name"),
+  NAME_ALTERNATIVE("http://bibfra.me/vocab/lite/nameAlternative"),
   NON_SORT_NUM("http://bibfra.me/vocab/bflc/nonSortNum"),
   NOTE("http://bibfra.me/vocab/lite/note"),
+  NUMERATION("http://bibfra.me/vocab/marc/numeration"),
   ORIGINAL_VERSION_NOTE("http://bibfra.me/vocab/marc/originalVersionNote"),
   OTHER_EVENT_INFORMATION("http://bibfra.me/vocab/marc/otherEventInformation"),
   PART_NAME("http://bibfra.me/vocab/marc/partName"),
@@ -87,6 +91,7 @@ public enum PropertyDictionary {
   TABLE_OF_CONTENTS("http://bibfra.me/vocab/marc/tableOfContents"),
   TARGET_AUDIENCE("http://bibfra.me/vocab/marc/targetAudience"),
   TERM("http://bibfra.me/vocab/marc/term"),
+  TITLES("http://bibfra.me/vocab/marc/titles"),
   TYPE_OF_REPORT("http://bibfra.me/vocab/marc/typeOfReport"),
   VARIANT_TYPE("http://bibfra.me/vocab/marc/variantType"),
   WITH_NOTE("http://bibfra.me/vocab/marc/withNote");
