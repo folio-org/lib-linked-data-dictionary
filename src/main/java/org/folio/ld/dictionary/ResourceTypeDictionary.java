@@ -20,6 +20,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   ID_UNKNOWN("http://library.link/identifier/UNKNOWN", -1259663971045664909L),
   INSTANCE("http://bibfra.me/vocab/lite/Instance", -6368122725352320482L),
   ITEM("http://bibfra.me/vocab/lite/Item", -1796261916093733980L),
+  JURISDICTION("http://bibfra.me/vocab/lite/Jurisdiction", 4072387342118066928L),
   MEDIA("http://bibfra.me/vocab/marc/Media", 6927281723593087650L),
   MEETING("http://bibfra.me/vocab/lite/Meeting", 8312970713564449340L),
   ORGANIZATION("http://bibfra.me/vocab/lite/Organization", -2724163952136761329L),
