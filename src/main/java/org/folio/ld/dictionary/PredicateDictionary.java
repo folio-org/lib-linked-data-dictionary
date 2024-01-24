@@ -163,6 +163,7 @@ public enum PredicateDictionary implements Predicate {
   FORGER("http://bibfra.me/vocab/relation/forger", 7983589711752821428L),
   FORMER_OWNER("http://bibfra.me/vocab/relation/formerowner", -5538768076085386314L),
   FUNDER("http://bibfra.me/vocab/relation/funder", -2047243937090523029L),
+  GENRE("http://bibfra.me/vocab/lite/genre", 4866975688890760085L),
   GEOGRAPHIC_INFORMATION_SPECIALIST("http://bibfra.me/vocab/relation/geographicinformationspecialist",
     3508308357296568573L),
   GEOSPATIAL_INFORMATION_SPECIALIST("http://bibfra.me/vocab/relation/geospatialinformationspecialist",
