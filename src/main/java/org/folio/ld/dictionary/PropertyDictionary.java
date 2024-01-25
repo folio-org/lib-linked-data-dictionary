@@ -98,7 +98,8 @@ public enum PropertyDictionary {
   TITLES("http://bibfra.me/vocab/marc/titles"),
   TYPE_OF_REPORT("http://bibfra.me/vocab/marc/typeOfReport"),
   VARIANT_TYPE("http://bibfra.me/vocab/marc/variantType"),
-  WITH_NOTE("http://bibfra.me/vocab/marc/withNote");
+  WITH_NOTE("http://bibfra.me/vocab/marc/withNote"),
+  PROVIDER_PLACE("http://bibfra.me/vocab/lite/providerPlace");
 
   private final String value;
 
