@@ -38,6 +38,7 @@ public enum PropertyDictionary {
   FORM_SUBDIVISION("http://bibfra.me/vocab/marc/formSubdivision"),
   FUNDING_INFORMATION("http://bibfra.me/vocab/marc/fundingInformation"),
   GENERAL_SUBDIVISION("http://bibfra.me/vocab/marc/generalSubdivision"),
+  GEOGRAPHIC_AREA_CODE("http://bibfra.me/vocab/marc/geographicAreaCode"),
   GEOGRAPHIC_COVERAGE("http://bibfra.me/vocab/marc/geographicCoverage"),
   GEOGRAPHIC_SUBDIVISION("http://bibfra.me/vocab/marc/geographicSubdivision"),
   GOVERNING_ACCESS_NOTE("http://bibfra.me/vocab/marc/governingAccessNote"),
