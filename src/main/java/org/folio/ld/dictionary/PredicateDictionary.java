@@ -186,6 +186,7 @@ public enum PredicateDictionary implements Predicate {
   INTERVIEWEE("http://bibfra.me/vocab/relation/interviewee", -1175175354014580390L),
   INTERVIEWER("http://bibfra.me/vocab/relation/interviewer", -1434850621539835676L),
   INVENTOR("http://bibfra.me/vocab/relation/inventor", 2360661655945154590L),
+  IS_DEFINED_BY("http://bibfra.me/vocab/lite/isDefinedBy", 7957687350759571585L),
   ISSUING_BODY("http://bibfra.me/vocab/relation/issuingbody", 8791761742962649291L),
   JOINT_AUTHOR("http://bibfra.me/vocab/relation/jointauthor", 8080521624853626976L),
   JUDGE("http://bibfra.me/vocab/relation/judge", -7432803083318954618L),

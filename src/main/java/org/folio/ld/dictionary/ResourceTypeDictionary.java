@@ -8,6 +8,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   ANNOTATION("http://bibfra.me/vocab/lite/Annotation", -2716756821684516448L),
   CARRIER("http://bibfra.me/vocab/marc/Carrier", 421212736624329420L),
   CATEGORY("http://bibfra.me/vocab/lite/Category", -7237503330348194663L),
+  CATEGORY_SET("http://bibfra.me/vocab/lite/CategorySet", -1236482431314522895L),
   CONCEPT("http://bibfra.me/vocab/lite/Concept", 6012322771220013009L),
   COPYRIGHT_EVENT("http://bibfra.me/vocab/lite/CopyrightEvent", 7138672891049112604L),
   FAMILY("http://bibfra.me/vocab/lite/Family", -1114722094452060721L),
