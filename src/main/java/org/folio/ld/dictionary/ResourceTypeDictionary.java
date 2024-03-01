@@ -1,7 +1,7 @@
 package org.folio.ld.dictionary;
 
 import lombok.Getter;
-import org.folio.ld.dictionary.api.ResourceType;
+import org.folio.ld.dictionary.model.ResourceType;
 
 @Getter
 public enum ResourceTypeDictionary implements ResourceType {

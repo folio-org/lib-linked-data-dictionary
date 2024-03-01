@@ -3,7 +3,7 @@ package org.folio.ld.dictionary;
 import java.util.Arrays;
 import java.util.Optional;
 import lombok.Getter;
-import org.folio.ld.dictionary.api.Predicate;
+import org.folio.ld.dictionary.model.Predicate;
 
 @Getter
 public enum PredicateDictionary implements Predicate {
