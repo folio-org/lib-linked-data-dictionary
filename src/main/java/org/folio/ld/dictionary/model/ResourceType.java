@@ -1,4 +1,4 @@
-package org.folio.ld.dictionary.api;
+package org.folio.ld.dictionary.model;
 
 public interface ResourceType {
 
