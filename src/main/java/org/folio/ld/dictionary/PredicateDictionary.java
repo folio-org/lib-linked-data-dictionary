@@ -330,6 +330,7 @@ public enum PredicateDictionary implements Predicate {
   SUPPORTING_HOST("http://bibfra.me/vocab/relation/supportinghost", -1366677099949474426L),
   SUPPOSED_NAME("http://bibfra.me/vocab/relation/supposedname", 8102844602830084573L),
   SURVEYOR("http://bibfra.me/vocab/relation/surveyor", 4252294449481960150L),
+  TARGET_AUDIENCE("http://bibfra.me/vocab/marc/targetAudience", -2457879742170133289L),
   TEACHER("http://bibfra.me/vocab/relation/teacher", 8090105527174445881L),
   TECHNICAL_DIRECTOR("http://bibfra.me/vocab/relation/technicaldirector", 8062534342751234140L),
   TECHNICAL_DRAFTSMAN("http://bibfra.me/vocab/relation/technicaldraftsman", -1223904927709061301L),
