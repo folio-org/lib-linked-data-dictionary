@@ -1,5 +1,7 @@
 package org.folio.ld.dictionary;
 
+import java.util.Arrays;
+import java.util.Optional;
 import lombok.Getter;
 import org.folio.ld.dictionary.model.ResourceType;
 
@@ -43,6 +45,12 @@ public enum ResourceTypeDictionary implements ResourceType {
   ResourceTypeDictionary(String uri, Long hash) {
     this.uri = uri;
     this.hash = hash;
+  }
+
+  public static Optional<ResourceTypeDictionary> fromUri(String value) {
+    return Arrays.stream(ResourceTypeDictionary.values())
+      .filter(type -> type.getUri().equals(value))
+      .findFirst();
   }
 
 }
