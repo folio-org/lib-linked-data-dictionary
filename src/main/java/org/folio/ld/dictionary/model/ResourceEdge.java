@@ -1,5 +1,7 @@
 package org.folio.ld.dictionary.model;
 
+import static java.util.Optional.ofNullable;
+
 import java.util.Objects;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -28,13 +30,34 @@ public class ResourceEdge {
       return false;
     }
     ResourceEdge that = (ResourceEdge) o;
-    return Objects.equals(source.getResourceHash(), that.source.getResourceHash())
-      && Objects.equals(target.getResourceHash(), that.target.getResourceHash())
-      && Objects.equals(predicate.getHash(), that.predicate.getHash());
+    return Objects.equals(getSourceHash(), that.getSourceHash())
+      && Objects.equals(getTargetHash(), that.getTargetHash())
+      && Objects.equals(getPredicateHash(), that.getPredicateHash());
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(source.getResourceHash(), target.getResourceHash(), predicate.getHash());
+    return Objects.hash(getSourceHash(), getTargetHash(), getPredicateHash());
+  }
+
+  private Long getSourceHash() {
+    return ofNullable(id)
+      .map(ResourceEdgePk::getSourceHash)
+      .or(() -> ofNullable(source).map(Resource::getResourceHash))
+      .orElse(null);
+  }
+
+  private Long getTargetHash() {
+    return ofNullable(id)
+      .map(ResourceEdgePk::getTargetHash)
+      .or(() -> ofNullable(target).map(Resource::getResourceHash))
+      .orElse(null);
+  }
+
+  private Long getPredicateHash() {
+    return ofNullable(id)
+      .map(ResourceEdgePk::getPredicateHash)
+      .or(() -> ofNullable(predicate).map(Predicate::getHash))
+      .orElse(null);
   }
 }
