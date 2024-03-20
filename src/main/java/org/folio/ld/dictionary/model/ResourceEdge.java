@@ -19,7 +19,7 @@ public class ResourceEdge {
   private final Resource target;
   private final PredicateDictionary predicate;
   @ToString.Exclude
-  private ResourceEdgePk id = new ResourceEdgePk();
+  private ResourceEdgePk id;
 
   @Override
   public boolean equals(Object o) {
