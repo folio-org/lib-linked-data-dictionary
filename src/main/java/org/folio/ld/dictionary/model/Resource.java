@@ -16,10 +16,10 @@ import org.folio.ld.dictionary.ResourceTypeDictionary;
 @Data
 @NoArgsConstructor
 @Accessors(chain = true)
-@EqualsAndHashCode(of = "resourceHash")
+@EqualsAndHashCode(of = "id")
 public class Resource {
 
-  private Long resourceHash;
+  private Long id;
 
   private String label;
 
