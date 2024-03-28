@@ -19,7 +19,7 @@ public class ResourceEdge {
   private final Resource target;
   private final PredicateDictionary predicate;
   @ToString.Exclude
-  private ResourceEdgePk id = new ResourceEdgePk();
+  private ResourceEdgePk id;
 
   @Override
   public boolean equals(Object o) {
@@ -43,14 +43,14 @@ public class ResourceEdge {
   private Long getSourceHash() {
     return ofNullable(id)
       .map(ResourceEdgePk::getSourceHash)
-      .or(() -> ofNullable(source).map(Resource::getResourceHash))
+      .or(() -> ofNullable(source).map(Resource::getId))
       .orElse(null);
   }
 
   private Long getTargetHash() {
     return ofNullable(id)
       .map(ResourceEdgePk::getTargetHash)
-      .or(() -> ofNullable(target).map(Resource::getResourceHash))
+      .or(() -> ofNullable(target).map(Resource::getId))
       .orElse(null);
   }
 
