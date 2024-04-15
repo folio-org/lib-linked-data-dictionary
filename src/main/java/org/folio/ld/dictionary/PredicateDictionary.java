@@ -232,6 +232,7 @@ public enum PredicateDictionary implements Predicate {
   ONSCREEN_PRESENTER("http://bibfra.me/vocab/relation/onscreenpresenter"),
   OPPONENT("http://bibfra.me/vocab/relation/opponent"),
   ORIGINATOR("http://bibfra.me/vocab/relation/originator"),
+  ORIGIN_PLACE("http://bibfra.me/vocab/marc/originPlace"),
   ORGANIZER("http://bibfra.me/vocab/relation/organizer"),
   ORGANIZER_OF_MEETING("http://bibfra.me/vocab/relation/organizerofmeeting"),
   OTHER("http://bibfra.me/vocab/relation/other"),
