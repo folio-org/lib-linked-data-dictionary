@@ -256,6 +256,7 @@ class PredicateDictionaryTest {
     "http://bibfra.me/vocab/relation/onscreenpresenter, 8898946843623143208",
     "http://bibfra.me/vocab/relation/opponent, -2226274092248428595",
     "http://bibfra.me/vocab/relation/originator, -5006567038186364746",
+    "http://bibfra.me/vocab/marc/originPlace, -9037756205158587499",
     "http://bibfra.me/vocab/relation/organizer, -6817269620826515946",
     "http://bibfra.me/vocab/relation/organizerofmeeting, -6032784390913849652",
     "http://bibfra.me/vocab/relation/other, -8343171522807366254",
