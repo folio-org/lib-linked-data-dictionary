@@ -6,7 +6,7 @@
 
     <groupId>org.folio</groupId>
     <artifactId>lib-linked-data-dictionary</artifactId>
-    <version>1.0.0-alpha</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
 
