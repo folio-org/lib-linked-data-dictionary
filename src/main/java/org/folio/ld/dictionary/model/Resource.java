@@ -43,6 +43,14 @@ public class Resource {
     return this;
   }
 
+  public Resource addOutgoingEdge(ResourceEdge resourceEdge) {
+    if (isNull(outgoingEdges)) {
+      outgoingEdges = new LinkedHashSet<>();
+    }
+    outgoingEdges.add(resourceEdge);
+    return this;
+  }
+
   public Set<String> getTypeNames() {
     return types.stream().map(Enum::name).collect(toCollection(LinkedHashSet::new));
   }
