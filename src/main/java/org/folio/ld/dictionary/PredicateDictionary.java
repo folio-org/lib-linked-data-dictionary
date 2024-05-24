@@ -30,6 +30,7 @@ public enum PredicateDictionary implements Predicate {
   ARTIST("http://bibfra.me/vocab/relation/artist"),
   ARTISTIC_DIRECTOR("http://bibfra.me/vocab/relation/artisticdirector"),
   ASSIGNEE("http://bibfra.me/vocab/relation/assignee"),
+  ASSIGNING_SOURCE("http://bibfra.me/vocab/marc/assigningSource"),
   ASSOCIATED_NAME("http://bibfra.me/vocab/relation/associatedname"),
   ATTRIBUTED_NAME("http://bibfra.me/vocab/relation/attributedname"),
   AUCTIONEER("http://bibfra.me/vocab/relation/auctioneer"),
