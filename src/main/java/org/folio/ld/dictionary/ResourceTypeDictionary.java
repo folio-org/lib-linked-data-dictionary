@@ -12,6 +12,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   ANNOTATION("http://bibfra.me/vocab/lite/Annotation"),
   CATEGORY("http://bibfra.me/vocab/lite/Category"),
   CATEGORY_SET("http://bibfra.me/vocab/lite/CategorySet"),
+  CLASSIFICATION("http://bibfra.me/vocab/lite/Classification"),
   CONCEPT("http://bibfra.me/vocab/lite/Concept"),
   COPYRIGHT_EVENT("http://bibfra.me/vocab/lite/CopyrightEvent"),
   FAMILY("http://bibfra.me/vocab/lite/Family"),

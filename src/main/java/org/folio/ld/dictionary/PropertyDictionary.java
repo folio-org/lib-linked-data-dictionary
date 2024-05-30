@@ -29,6 +29,8 @@ public enum PropertyDictionary {
   DESCRIPTION_SOURCE_NOTE("http://bibfra.me/vocab/marc/descriptionSourceNote"),
   DIMENSIONS("http://bibfra.me/vocab/marc/dimensions"),
   EAN_VALUE("http://bibfra.me/vocab/marc/ean"),
+  EDITION("http://bibfra.me/vocab/marc/edition"),
+  EDITION_NUMBER("http://bibfra.me/vocab/marc/editionNumber"),
   EDITION_STATEMENT("http://bibfra.me/vocab/marc/edition"),
   ENTITY_AND_ATTRIBUTE_INFORMATION("http://bibfra.me/vocab/marc/entityAndAttributeInformation"),
   EQUIVALENT("http://bibfra.me/vocab/lite/equivalent"),
