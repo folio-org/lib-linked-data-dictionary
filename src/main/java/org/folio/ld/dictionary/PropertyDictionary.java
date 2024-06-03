@@ -86,6 +86,7 @@ public enum PropertyDictionary {
   RELATOR_CODE("http://bibfra.me/vocab/marc/relator_code"),
   RELATOR_TERM("http://bibfra.me/vocab/marc/relator_term"),
   REPRODUCTION_NOTE("http://bibfra.me/vocab/marc/reproductionNote"),
+  RESOURCE_PREFERRED("http://library.link/vocab/resourcePreferred"),
   SCALE_NOTE("http://bibfra.me/vocab/marc/scaleNote"),
   SIMPLE_PLACE("http://bibfra.me/vocab/lite/place"),
   SOURCE("http://bibfra.me/vocab/marc/source"),
