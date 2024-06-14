@@ -9,6 +9,7 @@ import org.folio.ld.dictionary.util.HashUtils;
 
 @Getter
 public enum ResourceTypeDictionary implements ResourceType {
+  AGENT("http://bibfra.me/vocab/lite/Agent"),
   ANNOTATION("http://bibfra.me/vocab/lite/Annotation"),
   CATEGORY("http://bibfra.me/vocab/lite/Category"),
   CATEGORY_SET("http://bibfra.me/vocab/lite/CategorySet"),
@@ -16,13 +17,17 @@ public enum ResourceTypeDictionary implements ResourceType {
   CONCEPT("http://bibfra.me/vocab/lite/Concept"),
   COPYRIGHT_EVENT("http://bibfra.me/vocab/lite/CopyrightEvent"),
   DISSERTATION("http://bibfra.me/vocab/scholar/Dissertation"),
+  EXTENT("http://bibfra.me/vocab/lite/Extent"),
   FAMILY("http://bibfra.me/vocab/lite/Family"),
   FORM("http://bibfra.me/vocab/lite/Form"),
   IDENTIFIER("http://bibfra.me/vocab/lite/Identifier"),
+  ID_CODEN("http://library.link/identifier/CODEN"),
   ID_EAN("http://bibfra.me/vocab/identifier/Ean"),
   ID_ISBN("http://library.link/identifier/ISBN"),
+  ID_ISSN("http://library.link/identifier/ISSN"),
   ID_LCCN("http://library.link/identifier/LCCN"),
   ID_LOCAL("http://bibfra.me/vocab/lite/LocalId"),
+  ID_STRN("http://library.link/identifier/STRN"),
   ID_UNKNOWN("http://library.link/identifier/UNKNOWN"),
   INSTANCE("http://bibfra.me/vocab/lite/Instance"),
   ITEM("http://bibfra.me/vocab/lite/Item"),

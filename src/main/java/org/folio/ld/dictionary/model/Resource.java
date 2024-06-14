@@ -10,6 +10,7 @@ import java.util.UUID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.folio.ld.dictionary.ResourceTypeDictionary;
 
@@ -31,8 +32,10 @@ public class Resource {
 
   private Set<ResourceTypeDictionary> types = new LinkedHashSet<>();
 
+  @ToString.Exclude
   private Set<ResourceEdge> outgoingEdges = new LinkedHashSet<>();
 
+  @ToString.Exclude
   private Set<ResourceEdge> incomingEdges = new LinkedHashSet<>();
 
   public Resource addType(ResourceTypeDictionary type) {
