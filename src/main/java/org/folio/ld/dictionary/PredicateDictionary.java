@@ -198,6 +198,7 @@ public enum PredicateDictionary implements Predicate {
   LABORATORY("http://bibfra.me/vocab/relation/laboratory"),
   LABORATORY_DIRECTOR("http://bibfra.me/vocab/relation/laboratorydirector"),
   LANDSCAPE_ARCHITECT("http://bibfra.me/vocab/relation/landscapearchitect"),
+  LANGUAGE("http://bibfra.me/vocab/lite/language"),
   LEAD("http://bibfra.me/vocab/relation/lead"),
   LENDER("http://bibfra.me/vocab/relation/lender"),
   LIBELANT("http://bibfra.me/vocab/relation/libelant"),
