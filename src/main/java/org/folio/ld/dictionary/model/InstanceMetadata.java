@@ -1,6 +1,5 @@
 package org.folio.ld.dictionary.model;
 
-import java.util.UUID;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
@@ -9,7 +8,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @Accessors(chain = true)
 public class InstanceMetadata {
-  private UUID inventoryId;
-  private UUID srsId;
+  private String inventoryId;
+  private String srsId;
   private ResourceSource source;
 }
