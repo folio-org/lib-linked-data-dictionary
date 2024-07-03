@@ -6,7 +6,6 @@ import static java.util.stream.Collectors.toCollection;
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.UUID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -26,9 +25,7 @@ public class Resource {
 
   private JsonNode doc;
 
-  private UUID inventoryId;
-
-  private UUID srsId;
+  private InstanceMetadata instanceMetadata;
 
   private Set<ResourceTypeDictionary> types = new LinkedHashSet<>();
 
