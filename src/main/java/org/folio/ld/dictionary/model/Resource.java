@@ -25,7 +25,7 @@ public class Resource {
 
   private JsonNode doc;
 
-  private InstanceMetadata instanceMetadata;
+  private FolioMetadata folioMetadata;
 
   private Set<ResourceTypeDictionary> types = new LinkedHashSet<>();
 
