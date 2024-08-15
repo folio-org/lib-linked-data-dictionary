@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 @Data
 @NoArgsConstructor
 @Accessors(chain = true)
-public class InstanceMetadata {
+public class FolioMetadata {
   private String inventoryId;
   private String srsId;
   private ResourceSource source;
