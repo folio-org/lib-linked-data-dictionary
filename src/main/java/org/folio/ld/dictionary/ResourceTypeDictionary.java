@@ -9,6 +9,7 @@ import org.folio.ld.dictionary.util.HashUtils;
 
 @Getter
 public enum ResourceTypeDictionary implements ResourceType {
+  ABBREVIATED_TITLE("http://bibfra.me/vocab/marc/AbbreviatedTitle"),
   AGENT("http://bibfra.me/vocab/lite/Agent"),
   ANNOTATION("http://bibfra.me/vocab/lite/Annotation"),
   CATEGORY("http://bibfra.me/vocab/lite/Category"),
