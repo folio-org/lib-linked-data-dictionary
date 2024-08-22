@@ -241,6 +241,7 @@ public enum PredicateDictionary implements Predicate {
   ORGANIZER("http://bibfra.me/vocab/relation/organizer"),
   ORGANIZER_OF_MEETING("http://bibfra.me/vocab/relation/organizerofmeeting"),
   OTHER("http://bibfra.me/vocab/relation/other"),
+  OTHER_EDITION("http://bibfra.me/vocab/relation/otherEdition"),
   OTHER_VERSION("http://bibfra.me/vocab/relation/otherVersion"),
   OWNER("http://bibfra.me/vocab/relation/owner"),
   PANELIST("http://bibfra.me/vocab/relation/panelist"),
