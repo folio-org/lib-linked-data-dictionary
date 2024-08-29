@@ -180,6 +180,7 @@ public enum PredicateDictionary implements Predicate {
   HOST("http://bibfra.me/vocab/relation/host"),
   HOST_INSTITUTION("http://bibfra.me/vocab/relation/hostinstitution"),
   ILLUMINATOR("http://bibfra.me/vocab/relation/illuminator"),
+  ILLUSTRATIONS("http://bibfra.me/vocab/marc/illustrations"),
   ILLUSTRATOR("http://bibfra.me/vocab/relation/illustrator"),
   IMPRIMATUR("http://bibfra.me/vocab/relation/imprimatur"),
   INSCRIBER("http://bibfra.me/vocab/relation/inscriber"),
