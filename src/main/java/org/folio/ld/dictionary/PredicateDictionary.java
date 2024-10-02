@@ -296,6 +296,7 @@ public enum PredicateDictionary implements Predicate {
   RECORDIST("http://bibfra.me/vocab/relation/recordist"),
   REDAKTOR("http://bibfra.me/vocab/relation/redaktor"),
   RENDERER("http://bibfra.me/vocab/relation/renderer"),
+  REPLACED_BY("https://bibfra.me/vocab/lite/replacedBy"),
   REPORTER("http://bibfra.me/vocab/relation/reporter"),
   REPOSITORY("http://bibfra.me/vocab/relation/repository"),
   RESEARCHER("http://bibfra.me/vocab/relation/researcher"),
