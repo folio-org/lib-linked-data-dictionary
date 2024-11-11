@@ -30,9 +30,11 @@ public class Resource {
   private Set<ResourceTypeDictionary> types = new LinkedHashSet<>();
 
   @ToString.Exclude
+  @SuppressWarnings("javaarchitecture:S7027")
   private Set<ResourceEdge> outgoingEdges = new LinkedHashSet<>();
 
   @ToString.Exclude
+  @SuppressWarnings("javaarchitecture:S7027")
   private Set<ResourceEdge> incomingEdges = new LinkedHashSet<>();
 
   public Resource addType(ResourceTypeDictionary type) {
