@@ -12,12 +12,11 @@ import org.folio.ld.dictionary.PredicateDictionary;
 @Data
 @Accessors(chain = true)
 @RequiredArgsConstructor
+@SuppressWarnings("javaarchitecture:S7027")
 public class ResourceEdge {
 
   @ToString.Exclude
-  @SuppressWarnings("javaarchitecture:S7027")
   private final Resource source;
-  @SuppressWarnings("javaarchitecture:S7027")
   private final Resource target;
   private final PredicateDictionary predicate;
   @ToString.Exclude
