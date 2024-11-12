@@ -17,6 +17,7 @@ import org.folio.ld.dictionary.ResourceTypeDictionary;
 @NoArgsConstructor
 @Accessors(chain = true)
 @EqualsAndHashCode(of = "id")
+@SuppressWarnings("javaarchitecture:S7027")
 public class Resource {
 
   private Long id;
@@ -30,11 +31,9 @@ public class Resource {
   private Set<ResourceTypeDictionary> types = new LinkedHashSet<>();
 
   @ToString.Exclude
-  @SuppressWarnings("javaarchitecture:S7027")
   private Set<ResourceEdge> outgoingEdges = new LinkedHashSet<>();
 
   @ToString.Exclude
-  @SuppressWarnings("javaarchitecture:S7027")
   private Set<ResourceEdge> incomingEdges = new LinkedHashSet<>();
 
   public Resource addType(ResourceTypeDictionary type) {
