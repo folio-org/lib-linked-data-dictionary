@@ -20,6 +20,8 @@ public enum PropertyDictionary {
   CODE("http://bibfra.me/vocab/marc/code"),
   COMPUTER_DATA_NOTE("http://bibfra.me/vocab/marc/computerDataNote"),
   CONTROL_FIELD("http://bibfra.me/vocab/marc/controlField"),
+  CONTROL_NUMBER("http://bibfra.me/vocab/marc/controlNumber"),
+  CREATED_DATE("http://bibfra.me/vocab/lite/createdDate"),
   CREDITS_NOTE("http://bibfra.me/vocab/marc/creditsNote"),
   DATA_QUALITY("http://bibfra.me/vocab/marc/dataQuality"),
   DATE("http://bibfra.me/vocab/lite/date"),
