@@ -27,7 +27,7 @@
     <guava.version>33.3.1-jre</guava.version>
     <junit.version>5.11.3</junit.version>
     <assertj.version>3.26.3</assertj.version>
-    <checkstyle.version>10.20.1</checkstyle.version>
+    <checkstyle.version>10.20.2</checkstyle.version>
 
     <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
