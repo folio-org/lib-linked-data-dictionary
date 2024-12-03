@@ -15,6 +15,7 @@ public enum PredicateDictionary implements Predicate {
   ACTOR("http://bibfra.me/vocab/relation/actor"),
   ADAPTER("http://bibfra.me/vocab/relation/adapter"),
   ADDRESSEE("http://bibfra.me/vocab/relation/addressee"),
+  ADMIN_METADATA("http://bibfra.me/vocab/marc/adminMetadata"),
   ANALYST("http://bibfra.me/vocab/relation/analyst"),
   ANIMATOR("http://bibfra.me/vocab/relation/animator"),
   ANNOTATOR("http://bibfra.me/vocab/relation/annotator"),
