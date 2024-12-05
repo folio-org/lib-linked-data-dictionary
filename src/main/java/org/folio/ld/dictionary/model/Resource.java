@@ -28,6 +28,10 @@ public class Resource {
 
   private FolioMetadata folioMetadata;
 
+  private String createdBy;
+
+  private String updatedBy;
+
   private Set<ResourceTypeDictionary> types = new LinkedHashSet<>();
 
   @ToString.Exclude
