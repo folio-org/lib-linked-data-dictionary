@@ -4,6 +4,7 @@ import static java.util.Objects.isNull;
 import static java.util.stream.Collectors.toCollection;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import lombok.Data;
@@ -27,6 +28,8 @@ public class Resource {
   private JsonNode doc;
 
   private FolioMetadata folioMetadata;
+
+  private Date updatedAt;
 
   private Set<ResourceTypeDictionary> types = new LinkedHashSet<>();
 
