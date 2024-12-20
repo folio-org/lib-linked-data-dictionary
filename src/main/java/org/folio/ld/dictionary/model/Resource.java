@@ -29,7 +29,9 @@ public class Resource {
 
   private FolioMetadata folioMetadata;
 
-  private Date updatedAt;
+  private Date createdDate;
+
+  private Date updatedDate;
 
   private Set<ResourceTypeDictionary> types = new LinkedHashSet<>();
 
