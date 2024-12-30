@@ -27,6 +27,8 @@ public class Resource {
 
   private JsonNode doc;
 
+  private String rawData;
+
   private FolioMetadata folioMetadata;
 
   private Date createdDate;
