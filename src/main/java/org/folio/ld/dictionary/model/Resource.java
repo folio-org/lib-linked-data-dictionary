@@ -29,7 +29,7 @@ public class Resource {
 
   private FolioMetadata folioMetadata;
 
-  private RawMarc rawMarc;
+  private RawMarc unmappedMarc;
 
   private Date createdDate;
 
