@@ -8,6 +8,7 @@ import lombok.Getter;
 public enum PropertyDictionary {
 
   ACCESSIBILITY_NOTE("http://bibfra.me/vocab/marc/accessibilityNote"),
+  ACCOMPANYING_MATERIAL("http://bibfra.me/vocab/marc/accompanyingMaterial"),
   ADDITIONAL_PHYSICAL_FORM("http://bibfra.me/vocab/marc/additionalPhysicalForm"),
   AFFILIATION("http://bibfra.me/vocab/scholar/affiliation"),
   ASSIGNER("http://bibfra.me/vocab/marc/assigner"),
