@@ -70,6 +70,7 @@ public enum PropertyDictionary {
   LOCATION_OF_OTHER_ARCHIVAL_MATERIAL("http://bibfra.me/vocab/marc/locationOfOtherArchivalMaterial"),
   MAIN_TITLE("http://bibfra.me/vocab/marc/mainTitle"),
   MATERIALS("http://bibfra.me/vocab/marc/materials"),
+  MATERIALS_SPEC("http://bibfra.me/vocab/marc/materialsSpec"),
   MATERIALS_SPECIFIED("http://bibfra.me/vocab/marc/materialsSpecified"),
   MISC_INFO("http://bibfra.me/vocab/marc/miscInfo"),
   NAME("http://bibfra.me/vocab/lite/name"),
