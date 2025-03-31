@@ -3,6 +3,7 @@
 - Convert marc field 586 (Awards Note) to Resource description [MODLD-366](https://folio-org.atlassian.net/browse/MODLD-366)
 - Add properties related to marc field 545 [MODLD-337](https://folio-org.atlassian.net/browse/MODLD-337)
 - Language Category predicates added [MODLD-361](https://folio-org.atlassian.net/browse/MODLD-361)
+- Add NUMBER_OF_PARTS property [MODLD-683](https://folio-org.atlassian.net/browse/MODLD-683)
 
 ## 1.0.1 (03-12-2025)
 - Initial release

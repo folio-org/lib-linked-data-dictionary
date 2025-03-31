@@ -79,6 +79,7 @@ public enum PropertyDictionary {
   NAME_ALTERNATIVE("http://bibfra.me/vocab/lite/nameAlternative"),
   NON_SORT_NUM("http://bibfra.me/vocab/bflc/nonSortNum"),
   NOTE("http://bibfra.me/vocab/lite/note"),
+  NUMBER_OF_PARTS("http://bibfra.me/vocab/marc/numberOfParts"),
   NUMERATION("http://bibfra.me/vocab/marc/numeration"),
   ORIGINAL_VERSION_NOTE("http://bibfra.me/vocab/marc/originalVersionNote"),
   OTHER_EVENT_INFORMATION("http://bibfra.me/vocab/marc/otherEventInformation"),
