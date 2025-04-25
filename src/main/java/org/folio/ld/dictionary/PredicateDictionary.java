@@ -199,6 +199,7 @@ public enum PredicateDictionary implements Predicate {
   INTERVIEWER("http://bibfra.me/vocab/relation/interviewer"),
   INVENTOR("http://bibfra.me/vocab/relation/inventor"),
   IS_DEFINED_BY("http://bibfra.me/vocab/lite/isDefinedBy"),
+  IS_PART_OF("http://bibfra.me/vocab/relation/isPartOf"),
   ISSUING_BODY("http://bibfra.me/vocab/relation/issuingbody"),
   JOINT_AUTHOR("http://bibfra.me/vocab/relation/jointauthor"),
   JUDGE("http://bibfra.me/vocab/relation/judge"),

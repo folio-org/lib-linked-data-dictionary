@@ -46,6 +46,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   TITLE("http://bibfra.me/vocab/marc/Title"),
   TOPIC("http://bibfra.me/vocab/lite/Topic"),
   VARIANT_TITLE("http://bibfra.me/vocab/marc/VariantTitle"),
+  SERIES("http://bibfra.me/vocab/lite/Series"),
   WORK("http://bibfra.me/vocab/lite/Work");
 
   private final String uri;

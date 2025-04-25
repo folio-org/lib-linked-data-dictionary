@@ -14,7 +14,7 @@ public enum PropertyDictionary {
   ASSIGNER("http://bibfra.me/vocab/marc/assigner"),
   ASSIGNING_SOURCE("http://bibfra.me/vocab/marc/localIdAssigningSource"),
   ATTRIBUTION("http://bibfra.me/vocab/marc/attribution"),
-  AUTHORITY_LINK("http://bibfra.me/vocab/lite/authorityLink"),
+  AUTHORITY_LINK("http://bibfra.me/vocab/marc/issnauthorityLink"),
   AWARDS_NOTE("http://bibfra.me/vocab/marc/awardsNote"),
   BIBLIOGRAPHY_NOTE("http://bibfra.me/vocab/marc/bibliographyNote"),
   BIOGRAPHICAL_DATA("http://bibfra.me/vocab/marc/biogdata"),
@@ -54,6 +54,7 @@ public enum PropertyDictionary {
   GEOGRAPHIC_SUBDIVISION("http://bibfra.me/vocab/marc/geographicSubdivision"),
   GOVERNING_ACCESS_NOTE("http://bibfra.me/vocab/marc/governingAccessNote"),
   HISTORICAL_DATA("http://bibfra.me/vocab/marc/adminhist"),
+  ISSN("http://bibfra.me/vocab/marc/issn"),
   INFORMATION_ABOUT_DOCUMENTATION("http://bibfra.me/vocab/marc/informationAboutDocumentation"),
   INFORMATION_RELATING_TO_COPYRIGHT_STATUS("http://bibfra.me/vocab/marc/informationRelatingToCopyrightStatus"),
   ISSUANCE("http://bibfra.me/vocab/marc/issuance"),
@@ -119,6 +120,7 @@ public enum PropertyDictionary {
   TITLES("http://bibfra.me/vocab/marc/titles"),
   TYPE_OF_REPORT("http://bibfra.me/vocab/marc/typeOfReport"),
   VARIANT_TYPE("http://bibfra.me/vocab/marc/variantType"),
+  VOLUME("http://bibfra.me/vocab/marc/volume"),
   WITH_NOTE("http://bibfra.me/vocab/marc/withNote");
 
   private final String value;
