@@ -14,7 +14,7 @@ public enum PropertyDictionary {
   ASSIGNER("http://bibfra.me/vocab/marc/assigner"),
   ASSIGNING_SOURCE("http://bibfra.me/vocab/marc/localIdAssigningSource"),
   ATTRIBUTION("http://bibfra.me/vocab/marc/attribution"),
-  AUTHORITY_LINK("http://bibfra.me/vocab/marc/issnauthorityLink"),
+  AUTHORITY_LINK("http://bibfra.me/vocab/lite/authorityLink"),
   AWARDS_NOTE("http://bibfra.me/vocab/marc/awardsNote"),
   BIBLIOGRAPHY_NOTE("http://bibfra.me/vocab/marc/bibliographyNote"),
   BIOGRAPHICAL_DATA("http://bibfra.me/vocab/marc/biogdata"),
