@@ -18,6 +18,7 @@ public enum PropertyDictionary {
   AWARDS_NOTE("http://bibfra.me/vocab/marc/awardsNote"),
   BIBLIOGRAPHY_NOTE("http://bibfra.me/vocab/marc/bibliographyNote"),
   BIOGRAPHICAL_DATA("http://bibfra.me/vocab/marc/biogdata"),
+  BOOK_FORMAT("http://bibfra.me/vocab/marc/bookFormat"),
   CHRONOLOGICAL_SUBDIVISION("http://bibfra.me/vocab/marc/chronologicalSubdivision"),
   CITATION_COVERAGE("http://bibfra.me/vocab/marc/citationCoverage"),
   CODE("http://bibfra.me/vocab/marc/code"),
