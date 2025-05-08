@@ -52,6 +52,7 @@ public enum PredicateDictionary implements Predicate {
   BINDING_DESIGNER("http://bibfra.me/vocab/relation/bindingdesigner"),
   BLURB_WRITER("http://bibfra.me/vocab/relation/blurbwriter"),
   BOOK_DESIGNER("http://bibfra.me/vocab/relation/bookdesigner"),
+  BOOK_FORMAT("http://bibfra.me/vocab/marc/bookFormat"),
   BOOK_JACKET_DESIGNER("http://bibfra.me/vocab/relation/bookjacketdesigner"),
   BOOK_PLATE_DESIGNER("http://bibfra.me/vocab/relation/bookplatedesigner"),
   BOOK_PRODUCER("http://bibfra.me/vocab/relation/bookproducer"),
