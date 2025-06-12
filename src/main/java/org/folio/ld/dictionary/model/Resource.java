@@ -51,6 +51,10 @@ public class Resource {
     return this;
   }
 
+  public boolean isOfType(ResourceTypeDictionary type) {
+    return getTypes().stream().anyMatch(at -> at.getUri().equals(type.getUri()));
+  }
+
   public Resource addOutgoingEdge(ResourceEdge resourceEdge) {
     if (isNull(outgoingEdges)) {
       outgoingEdges = new LinkedHashSet<>();
