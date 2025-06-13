@@ -41,4 +41,42 @@ class ResourceTest {
     assertThat(sourceResource.getOutgoingEdges())
       .containsExactlyInAnyOrder(edge1, edge2);
   }
+
+  @Test
+  void isOfType_shouldReturnTrueForMatchingType() {
+    // given
+    var resource = new Resource();
+    resource.addType(ResourceTypeDictionary.WORK);
+
+    // when
+    boolean isOfType = resource.isOfType(ResourceTypeDictionary.WORK);
+
+    // then
+    assertThat(isOfType).isTrue();
+  }
+
+  @Test
+  void isOfType_shouldReturnFalseForNonMatchingType() {
+    // given
+    var resource = new Resource();
+    resource.addType(ResourceTypeDictionary.WORK);
+
+    // when
+    boolean isOfType = resource.isOfType(ResourceTypeDictionary.IDENTIFIER);
+
+    // then
+    assertThat(isOfType).isFalse();
+  }
+
+  @Test
+  void isOfType_shouldReturnFalseForNoTypes() {
+    // given
+    var resource = new Resource();
+
+    // when
+    boolean isOfType = resource.isOfType(ResourceTypeDictionary.IDENTIFIER);
+
+    // then
+    assertThat(isOfType).isFalse();
+  }
 }
