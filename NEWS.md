@@ -6,6 +6,9 @@
 - Add NUMBER_OF_PARTS property [MODLD-683](https://folio-org.atlassian.net/browse/MODLD-683)
 - Mapping for MARC field 490 [MODLD-714](https://folio-org.atlassian.net/browse/MODLD-714)
 - Mapping for MARC field 340$m [MODLD-723](https://folio-org.atlassian.net/browse/MODLD-723)
+- RoleDictionary introduced [MODLD-750](https://folio-org.atlassian.net/browse/MODLD-750)
+- Resource.isOfType() method added [MODLD-755](https://folio-org.atlassian.net/browse/MODLD-755)
+- PlaceDictionary introduced [MODLD-781](https://folio-org.atlassian.net/browse/MODLD-781)
 
 ## 1.0.1 (03-12-2025)
 - Initial release
