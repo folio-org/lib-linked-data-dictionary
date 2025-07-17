@@ -44,7 +44,6 @@ public enum PropertyDictionary {
   ENTITY_AND_ATTRIBUTE_INFORMATION("http://bibfra.me/vocab/marc/entityAndAttributeInformation"),
   EQUIVALENT("http://bibfra.me/vocab/lite/equivalent"),
   EXHIBITIONS_NOTE("http://bibfra.me/vocab/marc/exhibitionsNote"),
-  EXTENT("http://bibfra.me/vocab/lite/extent"),
   FIELD_LINK("http://bibfra.me/vocab/marc/fieldLink"),
   FORMER_TITLE_NOTE("http://bibfra.me/vocab/marc/formerTitleNote"),
   FORM_SUBDIVISION("http://bibfra.me/vocab/marc/formSubdivision"),
