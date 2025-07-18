@@ -6,7 +6,6 @@ import lombok.Getter;
 
 @Getter
 public enum PropertyDictionary {
-
   ACCESSIBILITY_NOTE("http://bibfra.me/vocab/marc/accessibilityNote"),
   ACCOMPANYING_MATERIAL("http://bibfra.me/vocab/marc/accompanyingMaterial"),
   ADDITIONAL_PHYSICAL_FORM("http://bibfra.me/vocab/marc/additionalPhysicalForm"),
@@ -29,8 +28,8 @@ public enum PropertyDictionary {
   CREDITS_NOTE("http://bibfra.me/vocab/marc/creditsNote"),
   DATA_QUALITY("http://bibfra.me/vocab/marc/dataQuality"),
   DATE("http://bibfra.me/vocab/lite/date"),
-  DATE_END("http://bibfra.me/vocab/lite/dateEnd"),
   DATES_OF_PUBLICATION_NOTE("http://bibfra.me/vocab/marc/datesOfPublicationNote"),
+  DATE_END("http://bibfra.me/vocab/lite/dateEnd"),
   DATE_START("http://bibfra.me/vocab/lite/dateStart"),
   DEGREE("http://bibfra.me/vocab/marc/degree"),
   DESCRIPTION_SOURCE_NOTE("http://bibfra.me/vocab/marc/descriptionSourceNote"),
@@ -55,9 +54,9 @@ public enum PropertyDictionary {
   GEOGRAPHIC_SUBDIVISION("http://bibfra.me/vocab/marc/geographicSubdivision"),
   GOVERNING_ACCESS_NOTE("http://bibfra.me/vocab/marc/governingAccessNote"),
   HISTORICAL_DATA("http://bibfra.me/vocab/marc/adminhist"),
-  ISSN("http://bibfra.me/vocab/marc/issn"),
   INFORMATION_ABOUT_DOCUMENTATION("http://bibfra.me/vocab/marc/informationAboutDocumentation"),
   INFORMATION_RELATING_TO_COPYRIGHT_STATUS("http://bibfra.me/vocab/marc/informationRelatingToCopyrightStatus"),
+  ISSN("http://bibfra.me/vocab/marc/issn"),
   ISSUANCE("http://bibfra.me/vocab/marc/issuance"),
   ISSUANCE_NOTE("http://bibfra.me/vocab/marc/issuanceNote"),
   ISSUING_BODY("http://bibfra.me/vocab/marc/issuingBody"),
@@ -85,9 +84,9 @@ public enum PropertyDictionary {
   NUMERATION("http://bibfra.me/vocab/marc/numeration"),
   ORIGINAL_VERSION_NOTE("http://bibfra.me/vocab/marc/originalVersionNote"),
   OTHER_EVENT_INFORMATION("http://bibfra.me/vocab/marc/otherEventInformation"),
+  PARTICIPANT_NOTE("http://bibfra.me/vocab/marc/participantNote"),
   PART_NAME("http://bibfra.me/vocab/marc/partName"),
   PART_NUMBER("http://bibfra.me/vocab/marc/partNumber"),
-  PARTICIPANT_NOTE("http://bibfra.me/vocab/marc/participantNote"),
   PHYSICAL_DESCRIPTION("http://bibfra.me/vocab/marc/physicalDescription"),
   PLACE("http://bibfra.me/vocab/marc/place"),
   PROJECTED_PROVISION_DATE("http://bibfra.me/vocab/bflc/projectedProvisionDate"),
