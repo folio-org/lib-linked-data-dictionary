@@ -40,13 +40,13 @@ public enum ResourceTypeDictionary implements ResourceType {
   PERSON("http://bibfra.me/vocab/lite/Person"),
   PLACE("http://bibfra.me/vocab/lite/Place"),
   PROVIDER_EVENT("http://bibfra.me/vocab/lite/ProviderEvent"),
+  SERIES("http://bibfra.me/vocab/lite/Series"),
   STATUS("http://bibfra.me/vocab/marc/Status"),
   SUPPLEMENTARY_CONTENT("http://bibfra.me/vocab/marc/SupplementaryContent"),
   TEMPORAL("http://bibfra.me/vocab/lite/Temporal"),
   TITLE("http://bibfra.me/vocab/marc/Title"),
   TOPIC("http://bibfra.me/vocab/lite/Topic"),
   VARIANT_TITLE("http://bibfra.me/vocab/marc/VariantTitle"),
-  SERIES("http://bibfra.me/vocab/lite/Series"),
   WORK("http://bibfra.me/vocab/lite/Work");
 
   private final String uri;
