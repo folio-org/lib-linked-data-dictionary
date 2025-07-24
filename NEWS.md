@@ -9,6 +9,7 @@
 - RoleDictionary introduced [MODLD-750](https://folio-org.atlassian.net/browse/MODLD-750)
 - Resource.isOfType() method added [MODLD-755](https://folio-org.atlassian.net/browse/MODLD-755)
 - PlaceDictionary introduced [MODLD-781](https://folio-org.atlassian.net/browse/MODLD-781)
+- Characteristic predicate added [MODLD-794](https://folio-org.atlassian.net/browse/MODLD-794)
 
 ## 1.0.1 (03-12-2025)
 - Initial release
