@@ -72,6 +72,7 @@ public enum PredicateDictionary implements Predicate {
   CASTING_DIRECTOR("http://bibfra.me/vocab/relation/castingdirector"),
   CENSOR("http://bibfra.me/vocab/relation/censor"),
   CHIEF_ELECTRICIAN("http://bibfra.me/vocab/relation/chiefelectrician"),
+  CHARACTERISTIC("http://bibfra.me/vocab/marc/characteristic"),
   CHOREOGRAPHER("http://bibfra.me/vocab/relation/choreographer"),
   CINEMATOGRAPHER("http://bibfra.me/vocab/relation/cinematographer"),
   CLASSIFICATION("http://bibfra.me/vocab/lite/classification"),
