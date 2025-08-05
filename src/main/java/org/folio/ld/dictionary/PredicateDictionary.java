@@ -70,6 +70,7 @@ public enum PredicateDictionary implements Predicate {
   CARTOGRAPHER("http://bibfra.me/vocab/relation/cartographer"),
   CASTER("http://bibfra.me/vocab/relation/caster"),
   CASTING_DIRECTOR("http://bibfra.me/vocab/relation/castingdirector"),
+  CATALOGING_LANGUAGE("http://bibfra.me/vocab/lite/catalogingLanguage"),
   CENSOR("http://bibfra.me/vocab/relation/censor"),
   CHIEF_ELECTRICIAN("http://bibfra.me/vocab/relation/chiefelectrician"),
   CHARACTERISTIC("http://bibfra.me/vocab/marc/characteristic"),
