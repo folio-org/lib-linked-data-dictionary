@@ -11,6 +11,7 @@
 - PlaceDictionary introduced [MODLD-781](https://folio-org.atlassian.net/browse/MODLD-781)
 - Characteristic predicate added [MODLD-794](https://folio-org.atlassian.net/browse/MODLD-794)
 - Books and continuing resources types added [MODLD-805](https://folio-org.atlassian.net/browse/MODLD-805)
+- Replace ID_EAN with ID_IAN. Remove property EAN_VALUE. [MODLD-810](https://folio-org.atlassian.net/browse/MODLD-810)
 
 ## 1.0.1 (03-12-2025)
 - Initial release

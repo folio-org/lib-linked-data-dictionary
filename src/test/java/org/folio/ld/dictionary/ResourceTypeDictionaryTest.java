@@ -40,7 +40,7 @@ class ResourceTypeDictionaryTest {
     "http://bibfra.me/vocab/lite/Family, -1114722094452060721",
     "http://bibfra.me/vocab/lite/Form, 6102579518025542780",
     "http://bibfra.me/vocab/lite/Identifier, 8535666185887263660",
-    "http://bibfra.me/vocab/identifier/Ean, 219046076164824264",
+    "http://library.link/identifier/IAN, -2689808084414358372",
     "http://library.link/identifier/ISBN, 3962988838506018431",
     "http://library.link/identifier/LCCN, -5891299401617387451",
     "http://bibfra.me/vocab/lite/LocalId, 4097848952412986786",
