@@ -23,6 +23,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   EXTENT("http://bibfra.me/vocab/lite/Extent"),
   FAMILY("http://bibfra.me/vocab/lite/Family"),
   FORM("http://bibfra.me/vocab/lite/Form"),
+  FREQUENCY("http://bibfra.me/vocab/lite/Frequency"),
   IDENTIFIER("http://bibfra.me/vocab/lite/Identifier"),
   ID_CODEN("http://library.link/identifier/CODEN"),
   ID_IAN("http://library.link/identifier/IAN"),
