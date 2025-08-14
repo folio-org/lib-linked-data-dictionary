@@ -38,7 +38,6 @@ public enum PropertyDictionary {
   DISSERTATION_ID("http://bibfra.me/vocab/marc/dissertationID"),
   DISSERTATION_NOTE("http://bibfra.me/vocab/marc/dissertationNote"),
   DISSERTATION_YEAR("http://bibfra.me/vocab/marc/dissertationYear"),
-  EAN_VALUE("http://bibfra.me/vocab/marc/ean"),
   EDITION("http://bibfra.me/vocab/marc/edition"),
   EDITION_NUMBER("http://bibfra.me/vocab/marc/editionNumber"),
   ENTITY_AND_ATTRIBUTE_INFORMATION("http://bibfra.me/vocab/marc/entityAndAttributeInformation"),
