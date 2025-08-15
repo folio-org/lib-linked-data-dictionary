@@ -320,6 +320,7 @@ public enum PredicateDictionary implements Predicate {
   PROOFREADER("http://bibfra.me/vocab/relation/proofreader"),
   PROVIDER("http://bibfra.me/vocab/relation/provider"),
   PROVIDER_PLACE("http://bibfra.me/vocab/lite/providerPlace"),
+  PUBLICATION_FREQUENCY("http://bibfra.me/vocab/marc/publicationFrequency"),
   PUBLICATION_PLACE("http://bibfra.me/vocab/relation/publicationplace"),
   PUBLISHER("http://bibfra.me/vocab/relation/publisher"),
   PUBLISHING_DIRECTOR("http://bibfra.me/vocab/relation/publishingdirector"),

@@ -91,7 +91,6 @@ public enum PropertyDictionary {
   PLACE("http://bibfra.me/vocab/marc/place"),
   PROJECTED_PROVISION_DATE("http://bibfra.me/vocab/bflc/projectedProvisionDate"),
   PROVIDER_DATE("http://bibfra.me/vocab/lite/providerDate"),
-  PUBLICATION_FREQUENCY("http://bibfra.me/vocab/marc/publicationFrequency"),
   PUBLICATION_INFORMATION("http://bibfra.me/vocab/marc/publicationInformation"),
   QUALIFIER("http://bibfra.me/vocab/marc/qualifier"),
   REFERENCES("http://bibfra.me/vocab/marc/references"),
