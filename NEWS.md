@@ -13,6 +13,7 @@
 - Books and continuing resources types added [MODLD-805](https://folio-org.atlassian.net/browse/MODLD-805)
 - Replace ID_EAN with ID_IAN. Remove property EAN_VALUE. [MODLD-810](https://folio-org.atlassian.net/browse/MODLD-810)
 - Publication frequency introduced [MODLD-817](https://folio-org.atlassian.net/browse/MODLD-817)
+- PublicationFrequencyDictionary introduced [MODLD-826](https://folio-org.atlassian.net/browse/MODLD-826)
 
 ## 1.0.1 (03-12-2025)
 - Initial release
