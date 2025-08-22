@@ -1,5 +1,6 @@
-package org.folio.ld.dictionary;
+package org.folio.ld.dictionary.specific;
 
+import static java.util.Optional.ofNullable;
 import static org.folio.ld.dictionary.PredicateDictionary.ABRIDGER;
 import static org.folio.ld.dictionary.PredicateDictionary.ACTOR;
 import static org.folio.ld.dictionary.PredicateDictionary.ADAPTER;
@@ -306,9 +307,11 @@ import static org.folio.ld.dictionary.PredicateDictionary.WRITER_OF_SUPPLEMENTAR
 import static org.folio.ld.dictionary.PredicateDictionary.WRITER_OF_TELEVISION_STORY;
 
 import com.google.common.collect.ImmutableBiMap;
+import java.util.Optional;
+import org.folio.ld.dictionary.PredicateDictionary;
 
 public final class RoleDictionary {
-  private static final ImmutableBiMap<String, PredicateDictionary> ROLE_MAP =
+  private static final ImmutableBiMap<String, PredicateDictionary> VALUE_MAP =
     new ImmutableBiMap.Builder<String, PredicateDictionary>()
       .put("abr", ABRIDGER)
       .put("acp", ART_COPYIST)
@@ -619,11 +622,11 @@ public final class RoleDictionary {
   private RoleDictionary() {
   }
 
-  public static PredicateDictionary getRole(String code) {
-    return ROLE_MAP.get(code);
+  public static Optional<PredicateDictionary> getValue(String code) {
+    return ofNullable(VALUE_MAP.get(code));
   }
 
-  public static String getCode(PredicateDictionary role) {
-    return ROLE_MAP.inverse().get(role);
+  public static Optional<String> getCode(PredicateDictionary role) {
+    return ofNullable(VALUE_MAP.inverse().get(role));
   }
 }
