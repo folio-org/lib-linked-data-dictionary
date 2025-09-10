@@ -9,15 +9,15 @@ import org.folio.ld.dictionary.util.HashUtils;
 
 @Getter
 public enum ResourceTypeDictionary implements ResourceType {
-  ABBREVIATED_TITLE("http://bibfra.me/vocab/marc/AbbreviatedTitle"),
+  ABBREVIATED_TITLE("http://bibfra.me/vocab/library/AbbreviatedTitle"),
   AGENT("http://bibfra.me/vocab/lite/Agent"),
   ANNOTATION("http://bibfra.me/vocab/lite/Annotation"),
-  BOOKS("http://bibfra.me/vocab/marc/Books"),
+  BOOKS("http://bibfra.me/vocab/library/Books"),
   CATEGORY("http://bibfra.me/vocab/lite/Category"),
   CATEGORY_SET("http://bibfra.me/vocab/lite/CategorySet"),
   CLASSIFICATION("http://bibfra.me/vocab/lite/Classification"),
   CONCEPT("http://bibfra.me/vocab/lite/Concept"),
-  CONTINUING_RESOURCES("http://bibfra.me/vocab/marc/ContinuingResources"),
+  CONTINUING_RESOURCES("http://bibfra.me/vocab/library/ContinuingResources"),
   COPYRIGHT_EVENT("http://bibfra.me/vocab/lite/CopyrightEvent"),
   DISSERTATION("http://bibfra.me/vocab/scholar/Dissertation"),
   EXTENT("http://bibfra.me/vocab/lite/Extent"),
@@ -39,17 +39,17 @@ public enum ResourceTypeDictionary implements ResourceType {
   LANGUAGE_CATEGORY("http://bibfra.me/vocab/lite/LanguageCategory"),
   MEETING("http://bibfra.me/vocab/lite/Meeting"),
   ORGANIZATION("http://bibfra.me/vocab/lite/Organization"),
-  PARALLEL_TITLE("http://bibfra.me/vocab/marc/ParallelTitle"),
+  PARALLEL_TITLE("http://bibfra.me/vocab/library/ParallelTitle"),
   PERSON("http://bibfra.me/vocab/lite/Person"),
   PLACE("http://bibfra.me/vocab/lite/Place"),
   PROVIDER_EVENT("http://bibfra.me/vocab/lite/ProviderEvent"),
   SERIES("http://bibfra.me/vocab/lite/Series"),
-  STATUS("http://bibfra.me/vocab/marc/Status"),
-  SUPPLEMENTARY_CONTENT("http://bibfra.me/vocab/marc/SupplementaryContent"),
+  STATUS("http://bibfra.me/vocab/library/Status"),
+  SUPPLEMENTARY_CONTENT("http://bibfra.me/vocab/library/SupplementaryContent"),
   TEMPORAL("http://bibfra.me/vocab/lite/Temporal"),
-  TITLE("http://bibfra.me/vocab/marc/Title"),
+  TITLE("http://bibfra.me/vocab/library/Title"),
   TOPIC("http://bibfra.me/vocab/lite/Topic"),
-  VARIANT_TITLE("http://bibfra.me/vocab/marc/VariantTitle"),
+  VARIANT_TITLE("http://bibfra.me/vocab/library/VariantTitle"),
   WORK("http://bibfra.me/vocab/lite/Work");
 
   private final String uri;

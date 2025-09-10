@@ -11,11 +11,11 @@ class PropertyDictionaryTest {
 
   @ParameterizedTest
   @CsvSource({
-    "http://bibfra.me/vocab/marc/accessibilityNote, ACCESSIBILITY_NOTE",
-    "http://bibfra.me/vocab/marc/additionalPhysicalForm, ADDITIONAL_PHYSICAL_FORM",
-    "http://bibfra.me/vocab/marc/titles, TITLES",
-    "http://bibfra.me/vocab/marc/bibliographyNote, BIBLIOGRAPHY_NOTE",
-    "http://bibfra.me/vocab/marc/statementOfResponsibility, STATEMENT_OF_RESPONSIBILITY",
+    "http://bibfra.me/vocab/library/accessibilityNote, ACCESSIBILITY_NOTE",
+    "http://bibfra.me/vocab/library/additionalPhysicalForm, ADDITIONAL_PHYSICAL_FORM",
+    "http://bibfra.me/vocab/library/titles, TITLES",
+    "http://bibfra.me/vocab/library/bibliographyNote, BIBLIOGRAPHY_NOTE",
+    "http://bibfra.me/vocab/library/statementOfResponsibility, STATEMENT_OF_RESPONSIBILITY",
   })
   void fromValue_shouldReturnCorrectEnum(String value, PropertyDictionary expectedEnum) {
     // when
