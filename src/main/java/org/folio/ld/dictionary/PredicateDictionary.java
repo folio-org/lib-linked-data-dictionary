@@ -193,6 +193,7 @@ public enum PredicateDictionary implements Predicate {
   GOVERNMENT_PUBLICATION("http://bibfra.me/vocab/library/governmentPublication"),
   GRANTING_INSTITUTION("http://bibfra.me/vocab/library/grantingInstitution"),
   GRAPHIC_TECHNICIAN("http://bibfra.me/vocab/relation/graphictechnician"),
+  HAS_EXPRESSION("http://bibfra.me/vocab/lite/hasExpression"),
   HONOREE("http://bibfra.me/vocab/relation/honoree"),
   HONOUREE("http://bibfra.me/vocab/relation/honouree"),
   HONOUREE_OF_ITEM("http://bibfra.me/vocab/relation/honoureeofitem"),

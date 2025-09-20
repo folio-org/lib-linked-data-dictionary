@@ -39,6 +39,7 @@ class ResourceTypeDictionaryTest {
     "http://bibfra.me/vocab/lite/CopyrightEvent, 7138672891049112604",
     "http://bibfra.me/vocab/lite/Family, -1114722094452060721",
     "http://bibfra.me/vocab/lite/Form, 6102579518025542780",
+    "http://bibfra.me/vocab/lite/Hub, 8265908017653238834",
     "http://bibfra.me/vocab/lite/Identifier, 8535666185887263660",
     "http://library.link/identifier/IAN, -2689808084414358372",
     "http://library.link/identifier/ISBN, 3962988838506018431",

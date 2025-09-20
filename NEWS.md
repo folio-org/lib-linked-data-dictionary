@@ -16,6 +16,7 @@
 - PublicationFrequencyDictionary introduced [MODLD-826](https://folio-org.atlassian.net/browse/MODLD-826)
 - IllustrationDictionary introduced [MODLD-841](https://folio-org.atlassian.net/browse/MODLD-841)
 - Update IRIs with 'marc' to use 'library' instead [MODLD-792](https://folio-org.atlassian.net/browse/MODLD-792)
+- Add Hub type and relation predicate [MODLD-870](https://folio-org.atlassian.net/browse/MODLD-870)
 
 ## 1.0.1 (03-12-2025)
 - Initial release
