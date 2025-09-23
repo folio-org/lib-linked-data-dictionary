@@ -169,6 +169,7 @@ public enum PredicateDictionary implements Predicate {
   ETCHER("http://bibfra.me/vocab/relation/etcher"),
   EVENT_PLACE("http://bibfra.me/vocab/relation/eventplace"),
   EXPERT("http://bibfra.me/vocab/relation/expert"),
+  EXPRESSION_OF("http://bibfra.me/vocab/lite/expressionOf"),
   EXPURGATOR("http://bibfra.me/vocab/relation/expurgator"),
   EXTENT("http://bibfra.me/vocab/lite/extent"),
   EYEWITNESS("http://bibfra.me/vocab/relation/eyewitness"),

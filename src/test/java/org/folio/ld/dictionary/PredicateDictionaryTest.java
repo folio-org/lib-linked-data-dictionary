@@ -174,6 +174,7 @@ class PredicateDictionaryTest {
     "http://bibfra.me/vocab/relation/etcher, 1115075999780718952",
     "http://bibfra.me/vocab/relation/eventplace, 3317594278505427534",
     "http://bibfra.me/vocab/relation/expert, 8936994285309227038",
+    "http://bibfra.me/vocab/lite/expressionOf, -7095245685202566724",
     "http://bibfra.me/vocab/relation/expurgator, -9115691855201116956",
     "http://bibfra.me/vocab/relation/eyewitness, -5528585934167149587",
     "http://bibfra.me/vocab/relation/facsimilist, 6583566189663491430",
