@@ -2,6 +2,7 @@ package org.folio.ld.dictionary.serializer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.folio.ld.dictionary.PredicateDictionary.INSTANTIATES;
+import static org.folio.ld.dictionary.PredicateDictionary.TITLE;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.INSTANCE;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.WORK;
 import static org.folio.ld.dictionary.model.ResourceSource.LINKED_DATA;
@@ -39,6 +40,10 @@ class ResourceSerializerTest {
     resource2.setIncomingEdges(Set.of(edge));
     resource1.addOutgoingEdge(edge);
 
+    var cycleEdge = new ResourceEdge(resource2, resource1, TITLE);
+    resource1.setIncomingEdges(Set.of(cycleEdge));
+    resource2.addOutgoingEdge(cycleEdge);
+
     var resultJson = mapper.writeValueAsString(resource1);
 
     var expectedJson = """
@@ -55,7 +60,13 @@ class ResourceSerializerTest {
               "id": "2",
               "label": "Target Resource",
               "types": [ "http://bibfra.me/vocab/lite/Work" ],
-              "outgoingEdges": {}
+              "outgoingEdges": {
+                "http://bibfra.me/vocab/library/title": [
+                  {
+                    "id": "1"
+                  }
+                ]
+              }
             }
           ]
         }

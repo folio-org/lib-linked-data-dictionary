@@ -8,7 +8,9 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.Set;
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
 
@@ -34,10 +36,26 @@ public class ResourceSerializer extends StdSerializer<Resource> {
 
   @Override
   public void serialize(Resource resource, JsonGenerator gen, SerializerProvider provider) throws IOException {
+    serialize(resource, gen, provider, new HashSet<>());
+  }
+
+  private void serialize(Resource resource,
+                         JsonGenerator gen,
+                         SerializerProvider provider,
+                         Set<Long> visitedIds) throws IOException {
+    var cycleDetected = !visitedIds.add(resource.getId());
+
+    if (cycleDetected) {
+      // Serialize only id
+      gen.writeStartObject();
+      gen.writeStringField(FIELD_ID, String.valueOf(resource.getId()));
+      gen.writeEndObject();
+      return;
+    }
+
     gen.writeStartObject();
     gen.writeStringField(FIELD_ID, String.valueOf(resource.getId()));
     gen.writeStringField(FIELD_LABEL, resource.getLabel());
-
     if (resource.getDoc() != null) {
       gen.writeObjectField(FIELD_DOC, resource.getDoc());
     }
@@ -53,16 +71,15 @@ public class ResourceSerializer extends StdSerializer<Resource> {
     if (resource.getUpdatedDate() != null) {
       gen.writeObjectField(FIELD_UPDATED_DATE, resource.getUpdatedDate());
     }
-
     writeTypesArray(resource, gen);
-    writeOutgoingEdges(resource, gen, provider);
-
+    writeOutgoingEdges(resource, gen, provider, visitedIds);
     gen.writeEndObject();
   }
 
   private void writeOutgoingEdges(Resource resource,
                                   JsonGenerator gen,
-                                  SerializerProvider provider) throws IOException {
+                                  SerializerProvider provider,
+                                  Set<Long> visitedIds) throws IOException {
     if (resource.getOutgoingEdges() == null) {
       return;
     }
@@ -78,7 +95,7 @@ public class ResourceSerializer extends StdSerializer<Resource> {
     for (var predicateAndTarget : predicateAndTargets.entrySet()) {
       gen.writeArrayFieldStart(predicateAndTarget.getKey());
       for (var target : predicateAndTarget.getValue()) {
-        provider.defaultSerializeValue(target, gen);
+        serialize(target, gen, provider, visitedIds);
       }
       gen.writeEndArray();
     }
