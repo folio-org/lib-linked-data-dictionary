@@ -17,6 +17,7 @@
 - IllustrationDictionary introduced [MODLD-841](https://folio-org.atlassian.net/browse/MODLD-841)
 - Update IRIs with 'marc' to use 'library' instead [MODLD-792](https://folio-org.atlassian.net/browse/MODLD-792)
 - Add Hub type and relation predicate [MODLD-870](https://folio-org.atlassian.net/browse/MODLD-870)
+- ResourceViewDeserializer introduced [MODLDI-5](https://folio-org.atlassian.net/browse/MODLDI-5)
 
 ## 1.0.1 (03-12-2025)
 - Initial release
