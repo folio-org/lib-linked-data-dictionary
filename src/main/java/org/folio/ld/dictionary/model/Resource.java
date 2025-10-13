@@ -1,8 +1,11 @@
 package org.folio.ld.dictionary.model;
 
+import static com.fasterxml.jackson.annotation.ObjectIdGenerators.PropertyGenerator;
 import static java.util.Objects.isNull;
 import static java.util.stream.Collectors.toCollection;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.Date;
 import java.util.LinkedHashSet;
@@ -18,6 +21,7 @@ import org.folio.ld.dictionary.ResourceTypeDictionary;
 @NoArgsConstructor
 @Accessors(chain = true)
 @EqualsAndHashCode(of = "id")
+@JsonIdentityInfo(generator = PropertyGenerator.class,  property = "id")
 @SuppressWarnings("javaarchitecture:S7027")
 public class Resource {
 
@@ -63,6 +67,7 @@ public class Resource {
     return this;
   }
 
+  @JsonIgnore
   public Set<String> getTypeNames() {
     return types.stream().map(Enum::name).collect(toCollection(LinkedHashSet::new));
   }

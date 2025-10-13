@@ -4,23 +4,29 @@ import static java.util.Optional.ofNullable;
 
 import java.util.Objects;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.folio.ld.dictionary.PredicateDictionary;
 
 @Data
 @Accessors(chain = true)
-@RequiredArgsConstructor
+@NoArgsConstructor
 @SuppressWarnings("javaarchitecture:S7027")
 public class ResourceEdge {
 
   @ToString.Exclude
-  private final Resource source;
-  private final Resource target;
-  private final PredicateDictionary predicate;
+  private Resource source;
+  private Resource target;
+  private PredicateDictionary predicate;
   @ToString.Exclude
   private ResourceEdgePk id;
+
+  public ResourceEdge(Resource source, Resource target, PredicateDictionary predicate) {
+    this.source = source;
+    this.target = target;
+    this.predicate = predicate;
+  }
 
   @Override
   public boolean equals(Object o) {
