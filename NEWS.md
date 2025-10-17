@@ -19,6 +19,7 @@
 - Add Hub type and relation predicate [MODLD-870](https://folio-org.atlassian.net/browse/MODLD-870)
 - ResourceViewDeserializer introduced [MODLDI-5](https://folio-org.atlassian.net/browse/MODLDI-5)
 - Resource model made serializable to JSON [MODLDI-6](https://folio-org.atlassian.net/browse/MODLDI-6)
+- Include RELATED_TO relation in Predicate Dictionary [MODLD-890](https://folio-org.atlassian.net/browse/MODLD-890)
 
 ## 1.0.1 (03-12-2025)
 - Initial release
