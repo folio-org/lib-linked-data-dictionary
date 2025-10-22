@@ -67,6 +67,7 @@ public enum PropertyDictionary {
   LCNAF_ID("http://bibfra.me/vocab/library/lcnafId"),
   LINK("http://bibfra.me/vocab/lite/link"),
   LINKAGE("http://bibfra.me/vocab/library/linkage"),
+  LEGAL_DATE("http://bibfra.me/vocab/library/legalDate"),
   LOCAL_ID_VALUE("http://bibfra.me/vocab/library/localId"),
   LOCATION_OF_EVENT("http://bibfra.me/vocab/library/locationOfEvent"),
   LOCATION_OF_ORIGINALS_DUPLICATES("http://bibfra.me/vocab/library/locationOfOriginalsDuplicates"),
@@ -76,6 +77,7 @@ public enum PropertyDictionary {
   MATERIALS_SPECIFIED("http://bibfra.me/vocab/library/materialsSpecified"),
   MISC_INFO("http://bibfra.me/vocab/library/miscInfo"),
   MODIFYING_AGENCY("http://bibfra.me/vocab/library/modifyingAgency"),
+  MUSIC_KEY("http://bibfra.me/vocab/library/musicKey"),
   NAME("http://bibfra.me/vocab/lite/name"),
   NAME_ALTERNATIVE("http://bibfra.me/vocab/lite/nameAlternative"),
   NON_SORT_NUM("http://bibfra.me/vocab/bflc/nonSortNum"),
@@ -120,6 +122,7 @@ public enum PropertyDictionary {
   TRANSCRIBING_AGENCY("http://bibfra.me/vocab/library/transcribingAgency"),
   TYPE_OF_REPORT("http://bibfra.me/vocab/library/typeOfReport"),
   VARIANT_TYPE("http://bibfra.me/vocab/library/variantType"),
+  VERSION("http://bibfra.me/vocab/library/version"),
   VOLUME("http://bibfra.me/vocab/library/volume"),
   WITH_NOTE("http://bibfra.me/vocab/library/withNote");
 
