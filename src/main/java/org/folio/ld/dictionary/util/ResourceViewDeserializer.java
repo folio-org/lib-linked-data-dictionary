@@ -73,7 +73,7 @@ public class ResourceViewDeserializer extends JsonDeserializer<Resource> {
   private void deserializeEdges(JsonNode node, Resource resource) {
     if (node.hasNonNull(FIELD_OUTGOING_EDGES) && node.get(FIELD_OUTGOING_EDGES).isObject()) {
       var edges = node.withObject(FIELD_OUTGOING_EDGES);
-      edges.propertyStream()
+      edges.properties().stream()
         .filter(entry -> entry.getValue().isArray())
         .forEach(entry -> makeEdges(entry.getKey(), entry.getValue(), resource));
     }
