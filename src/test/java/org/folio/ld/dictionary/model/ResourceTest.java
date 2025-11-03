@@ -11,6 +11,7 @@ import static org.folio.ld.dictionary.ResourceTypeDictionary.WORK;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.folio.ld.dictionary.PredicateDictionary;
 import org.junit.jupiter.api.Test;
 
@@ -91,7 +92,8 @@ class ResourceTest {
   @Test
   void serializationAndDeserializationTest() throws JsonProcessingException {
     // given
-    var objectMapper = new ObjectMapper();
+    var objectMapper = new ObjectMapper()
+      .configure(SerializationFeature.USE_EQUALITY_FOR_OBJECT_ID, true);
     var instance = new Resource()
       .setId(123L)
       .addType(INSTANCE)
@@ -101,28 +103,57 @@ class ResourceTest {
     var title = new Resource()
       .setId(456L)
       .addType(TITLE)
-      .setLabel("TITLE")
+      .setLabel("TITLE_LABEL")
       .setDoc(objectMapper.createArrayNode().add(objectMapper.createObjectNode().set(MAIN_TITLE.getValue(),
         objectMapper.createArrayNode().add("title"))));
+    var work = new Resource()
+      .setId(789L)
+      .addType(WORK)
+      .setLabel("WORK");
+    var title2 = new Resource()
+      .setId(456L)
+      .addType(TITLE)
+      .setLabel("TITLE_LABEL")
+      .setDoc(objectMapper.createArrayNode().add(objectMapper.createObjectNode().set(MAIN_TITLE.getValue(),
+        objectMapper.createArrayNode().add("title"))));
+    work.addOutgoingEdge(new ResourceEdge(work, title2, PredicateDictionary.TITLE));
     instance.addOutgoingEdge(new ResourceEdge(instance, title, PredicateDictionary.TITLE));
+    instance.addOutgoingEdge(new ResourceEdge(instance, work, PredicateDictionary.INSTANTIATES));
 
     // when
     var serialized = objectMapper.writeValueAsString(instance);
-    var deserialized = objectMapper.readValue(serialized, Resource.class);
+    assertThat(serialized).containsOnlyOnce("TITLE_LABEL");
+    var deserializedInstance = objectMapper.readValue(serialized, Resource.class);
 
     // then
-    assertThat(deserialized.getId()).isEqualTo(instance.getId());
-    assertThat(deserialized.getLabel()).isEqualTo(instance.getLabel());
-    assertThat(deserialized.getDoc()).isEqualTo(instance.getDoc());
-    assertThat(deserialized.getTypes()).isEqualTo(instance.getTypes());
-    assertThat(deserialized.getOutgoingEdges()).hasSize(1);
-    var deserializedEdge = deserialized.getOutgoingEdges().iterator().next();
-    assertThat(deserializedEdge.getSource()).isSameAs(deserialized);
-    assertThat(deserializedEdge.getPredicate()).isEqualTo(PredicateDictionary.TITLE);
-    var deserializedTitle = deserializedEdge.getTarget();
+    assertThat(deserializedInstance.getId()).isEqualTo(instance.getId());
+    assertThat(deserializedInstance.getLabel()).isEqualTo(instance.getLabel());
+    assertThat(deserializedInstance.getDoc()).isEqualTo(instance.getDoc());
+    assertThat(deserializedInstance.getTypes()).isEqualTo(instance.getTypes());
+    assertThat(deserializedInstance.getOutgoingEdges()).hasSize(2);
+    var edgeIterator = deserializedInstance.getOutgoingEdges().iterator();
+
+    var deserializedInstanceToTitleEdge = edgeIterator.next();
+    assertThat(deserializedInstanceToTitleEdge.getSource()).isSameAs(deserializedInstance);
+    assertThat(deserializedInstanceToTitleEdge.getPredicate()).isEqualTo(PredicateDictionary.TITLE);
+
+    var deserializedTitle = deserializedInstanceToTitleEdge.getTarget();
     assertThat(deserializedTitle.getId()).isEqualTo(title.getId());
     assertThat(deserializedTitle.getLabel()).isEqualTo(title.getLabel());
     assertThat(deserializedTitle.getDoc()).isEqualTo(title.getDoc());
     assertThat(deserializedTitle.getTypes()).isEqualTo(title.getTypes());
+
+    var deserializedInstanceToWorkEdge = edgeIterator.next();
+    assertThat(deserializedInstanceToWorkEdge.getSource()).isSameAs(deserializedInstance);
+    assertThat(deserializedInstanceToWorkEdge.getPredicate()).isEqualTo(PredicateDictionary.INSTANTIATES);
+    var deserializedWork = deserializedInstanceToWorkEdge.getTarget();
+    assertThat(deserializedWork.getId()).isEqualTo(work.getId());
+    assertThat(deserializedWork.getLabel()).isEqualTo(work.getLabel());
+    assertThat(deserializedWork.getTypes()).isEqualTo(work.getTypes());
+    assertThat(deserializedWork.getOutgoingEdges()).hasSize(1);
+    var workTitleEdge = deserializedWork.getOutgoingEdges().iterator().next();
+    assertThat(workTitleEdge.getSource()).isSameAs(deserializedWork);
+    assertThat(workTitleEdge.getPredicate()).isEqualTo(PredicateDictionary.TITLE);
+    assertThat(workTitleEdge.getTarget()).isEqualTo(deserializedTitle);
   }
 }
