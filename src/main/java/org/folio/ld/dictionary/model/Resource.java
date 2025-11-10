@@ -2,6 +2,7 @@ package org.folio.ld.dictionary.model;
 
 import static com.fasterxml.jackson.annotation.ObjectIdGenerators.PropertyGenerator;
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static java.util.stream.Collectors.toCollection;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
@@ -27,7 +28,7 @@ public class Resource {
 
   private Long id;
 
-  private String label;
+  private String label = "";
 
   private JsonNode doc;
 
@@ -70,6 +71,13 @@ public class Resource {
   @JsonIgnore
   public Set<String> getTypeNames() {
     return types.stream().map(Enum::name).collect(toCollection(LinkedHashSet::new));
+  }
+
+  public Resource setLabel(String label) {
+    if (nonNull(label)) {
+      this.label = label;
+    }
+    return this;
   }
 
 }

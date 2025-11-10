@@ -156,4 +156,16 @@ class ResourceTest {
     assertThat(workTitleEdge.getPredicate()).isEqualTo(PredicateDictionary.TITLE);
     assertThat(workTitleEdge.getTarget()).isEqualTo(deserializedTitle);
   }
+
+  @Test
+  void setLabel_shouldIgnoreNullArgument() {
+    // given
+    var r = new Resource();
+
+    // when
+    r.setLabel(null);
+
+    // then
+    assertThat(r.getLabel()).isEmpty();
+  }
 }
