@@ -22,6 +22,7 @@
 - Include RELATED_TO relation in Predicate Dictionary [MODLD-890](https://folio-org.atlassian.net/browse/MODLD-890)
 - Add LEGAL_DATE, MARC_KEY, MUSIC_KEY and VERSION properties to Dictionary [MODLD-884](https://folio-org.atlassian.net/browse/MODLD-884)
 - Use an older Jackson API call
+- Make sure Resource label is not null [MODLDI-7](https://folio-org.atlassian.net/browse/MODLDI-7)
 
 ## 1.0.1 (03-12-2025)
 - Initial release
