@@ -44,6 +44,7 @@ public enum PropertyDictionary {
   EQUIVALENT("http://bibfra.me/vocab/lite/equivalent"),
   EXHIBITIONS_NOTE("http://bibfra.me/vocab/library/exhibitionsNote"),
   FIELD_LINK("http://bibfra.me/vocab/library/fieldLink"),
+  FOLIO_INVENTORY_ID("http://bibfra.me/vocab/lite/folioInventoryId"),
   FORMER_TITLE_NOTE("http://bibfra.me/vocab/library/formerTitleNote"),
   FORM_SUBDIVISION("http://bibfra.me/vocab/library/formSubdivision"),
   FUNDING_INFORMATION("http://bibfra.me/vocab/library/fundingInformation"),
