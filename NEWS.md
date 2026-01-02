@@ -26,6 +26,7 @@
 - Add FOLIO_INVENTORY_ID to property dictionary [MODLD-904](https://folio-org.atlassian.net/browse/MODLD-904)
 - LabelGenerator and MOCKED_RESOURCE type are introduced [MODLD-789](https://folio-org.atlassian.net/browse/MODLD-789)
 - Update the IRI of ID_LOCAL to http://library.link/identifier/LOCAL [MODLD-939](https://folio-org.atlassian.net/browse/MODLD-939)
+- Add resource types FAST, GND, LCCSH, LCDGT, LCGFT, LCMPT, LCNAF, LCSH, MESH, VIAF and WIKIID [MODLD-939](https://folio-org.atlassian.net/browse/MODLD-939)
 
 ## 1.0.1 (03-12-2025)
 - Initial release
