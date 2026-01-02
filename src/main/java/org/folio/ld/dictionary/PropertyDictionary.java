@@ -69,7 +69,6 @@ public enum PropertyDictionary {
   LINK("http://bibfra.me/vocab/lite/link"),
   LINKAGE("http://bibfra.me/vocab/library/linkage"),
   LEGAL_DATE("http://bibfra.me/vocab/library/legalDate"),
-  LOCAL_ID_VALUE("http://bibfra.me/vocab/library/localId"),
   LOCATION_OF_EVENT("http://bibfra.me/vocab/library/locationOfEvent"),
   LOCATION_OF_ORIGINALS_DUPLICATES("http://bibfra.me/vocab/library/locationOfOriginalsDuplicates"),
   LOCATION_OF_OTHER_ARCHIVAL_MATERIAL("http://bibfra.me/vocab/library/locationOfOtherArchivalMaterial"),
