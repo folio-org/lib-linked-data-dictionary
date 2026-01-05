@@ -44,7 +44,7 @@ class ResourceTypeDictionaryTest {
     "http://library.link/identifier/IAN, -2689808084414358372",
     "http://library.link/identifier/ISBN, 3962988838506018431",
     "http://library.link/identifier/LCCN, -5891299401617387451",
-    "http://bibfra.me/vocab/lite/LocalId, 4097848952412986786",
+    "http://library.link/identifier/LOCAL, 2977361877105227003",
     "http://library.link/identifier/UNKNOWN, -1259663971045664909",
     "http://bibfra.me/vocab/lite/Instance, -6368122725352320482",
     "http://bibfra.me/vocab/lite/Item, -1796261916093733980",

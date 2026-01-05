@@ -31,7 +31,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   ID_ISBN("http://library.link/identifier/ISBN"),
   ID_ISSN("http://library.link/identifier/ISSN"),
   ID_LCCN("http://library.link/identifier/LCCN"),
-  ID_LOCAL("http://bibfra.me/vocab/lite/LocalId"),
+  ID_LOCAL("http://library.link/identifier/LOCAL"),
   ID_STRN("http://library.link/identifier/STRN"),
   ID_UNKNOWN("http://library.link/identifier/UNKNOWN"),
   INSTANCE("http://bibfra.me/vocab/lite/Instance"),
