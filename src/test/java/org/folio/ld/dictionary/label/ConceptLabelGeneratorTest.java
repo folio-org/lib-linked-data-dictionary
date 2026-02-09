@@ -1,4 +1,4 @@
-package org.folio.ld.dictionary.util;
+package org.folio.ld.dictionary.label;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.folio.ld.dictionary.PredicateDictionary.FOCUS;
@@ -10,7 +10,8 @@ import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
 import org.junit.jupiter.api.Test;
 
-class LabelGeneratorTest {
+class ConceptLabelGeneratorTest {
+  private final LabelGeneratorService generator = new LabelGeneratorService();
 
   @Test
   void generateLabel_shouldReturnDefaultLabelForUnsupportedType() {
@@ -21,7 +22,7 @@ class LabelGeneratorTest {
       .setLabel("Instance Label");
 
     // when
-    var label = LabelGenerator.generateLabel(resource);
+    var label = generator.getLabel(resource);
 
     // then
     assertThat(label).isEqualTo("Instance Label");
@@ -42,7 +43,7 @@ class LabelGeneratorTest {
     concept.addOutgoingEdge(focusEdge);
 
     // when
-    var label = LabelGenerator.generateLabel(concept);
+    var label = generator.getLabel(concept);
 
     // then
     assertThat(label).isEqualTo("Focus Label");
@@ -63,7 +64,7 @@ class LabelGeneratorTest {
     concept.addOutgoingEdge(subFocusEdge);
 
     // when
-    var label = LabelGenerator.generateLabel(concept);
+    var label = generator.getLabel(concept);
 
     // then
     assertThat(label).isEqualTo("SubFocus Label");
@@ -90,7 +91,7 @@ class LabelGeneratorTest {
     concept.addOutgoingEdge(subFocusEdge);
 
     // when
-    var label = LabelGenerator.generateLabel(concept);
+    var label = generator.getLabel(concept);
 
     // then
     assertThat(label).isEqualTo("Focus Label -- SubFocus Label");
@@ -104,7 +105,7 @@ class LabelGeneratorTest {
       .addType(CONCEPT);
 
     // when
-    var label = LabelGenerator.generateLabel(concept);
+    var label = generator.getLabel(concept);
 
     // then
     assertThat(label).isEmpty();
@@ -139,10 +140,9 @@ class LabelGeneratorTest {
     concept.addOutgoingEdge(new ResourceEdge(concept, subFocusResource2, SUB_FOCUS));
 
     // when
-    var label = LabelGenerator.generateLabel(concept);
+    var label = generator.getLabel(concept);
 
     // then
     assertThat(label).isEqualTo("Focus 1 -- Focus 2 -- SubFocus 1 -- SubFocus 2");
   }
 }
-
