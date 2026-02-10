@@ -1,21 +1,20 @@
 package org.folio.ld.dictionary.util;
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.JsonNode;
-import java.io.IOException;
 import java.util.Objects;
 import java.util.stream.StreamSupport;
 import org.folio.ld.dictionary.PredicateDictionary;
 import org.folio.ld.dictionary.ResourceTypeDictionary;
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
+import tools.jackson.core.JsonParser;
+import tools.jackson.databind.DeserializationContext;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ValueDeserializer;
 
 /**
  * Converts Resource View JSON to Resource model.
  */
-public class ResourceViewDeserializer extends JsonDeserializer<Resource> {
+public class ResourceViewDeserializer extends ValueDeserializer<Resource> {
 
   private static final String FIELD_ID = "id";
   private static final String FIELD_LABEL = "label";
@@ -24,8 +23,8 @@ public class ResourceViewDeserializer extends JsonDeserializer<Resource> {
   private static final String FIELD_OUTGOING_EDGES = "outgoingEdges";
 
   @Override
-  public Resource deserialize(JsonParser jp, DeserializationContext context) throws IOException {
-    JsonNode node = jp.getCodec().readTree(jp);
+  public Resource deserialize(JsonParser jp, DeserializationContext context) {
+    JsonNode node = jp.readValueAsTree();
     return deserializeNode(node);
   }
 
@@ -49,7 +48,7 @@ public class ResourceViewDeserializer extends JsonDeserializer<Resource> {
 
   private void deserializeLabel(JsonNode node, Resource resource) {
     if (node.hasNonNull(FIELD_LABEL)) {
-      resource.setLabel(node.get(FIELD_LABEL).asText());
+      resource.setLabel(node.get(FIELD_LABEL).asString());
     }
   }
 
@@ -64,7 +63,7 @@ public class ResourceViewDeserializer extends JsonDeserializer<Resource> {
     if (node.hasNonNull(FIELD_TYPES) && node.get(FIELD_TYPES).isArray()) {
       var types = node.withArray(FIELD_TYPES);
       StreamSupport.stream(types.spliterator(), false)
-        .map(type -> ResourceTypeDictionary.fromUri(type.asText()).orElse(null))
+        .map(type -> ResourceTypeDictionary.fromUri(type.asString()).orElse(null))
         .filter(Objects::nonNull)
         .forEach(resource::addType);
     }

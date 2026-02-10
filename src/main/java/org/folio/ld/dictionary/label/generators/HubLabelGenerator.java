@@ -7,7 +7,6 @@ import static org.folio.ld.dictionary.PredicateDictionary.TITLE;
 import static org.folio.ld.dictionary.PropertyDictionary.TERM;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.HUB;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import java.util.Optional;
 import java.util.stream.Stream;
 import org.folio.ld.dictionary.PredicateDictionary;
@@ -15,6 +14,7 @@ import org.folio.ld.dictionary.PropertyDictionary;
 import org.folio.ld.dictionary.label.LabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
+import tools.jackson.databind.JsonNode;
 
 public class HubLabelGenerator implements LabelGenerator {
   @Override
@@ -54,6 +54,6 @@ public class HubLabelGenerator implements LabelGenerator {
       .map(Resource::getDoc)
       .map(doc -> doc.get(property))
       .map(node -> node.get(0))
-      .map(JsonNode::asText);
+      .map(JsonNode::asString);
   }
 }
