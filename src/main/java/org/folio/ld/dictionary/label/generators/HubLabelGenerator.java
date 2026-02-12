@@ -31,7 +31,6 @@ public class HubLabelGenerator implements LabelGenerator {
       .findFirst()
       .or(() -> getPropertyValue(resource, PropertyDictionary.LANGUAGE.getValue()));
 
-
     return Stream.of(creatorLabel, titleLabel, languageLabel)
       .filter(Optional::isPresent)
       .map(Optional::get)
