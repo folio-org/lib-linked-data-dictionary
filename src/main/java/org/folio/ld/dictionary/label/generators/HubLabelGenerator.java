@@ -4,6 +4,7 @@ import static java.util.stream.Collectors.joining;
 import static org.folio.ld.dictionary.PredicateDictionary.CREATOR;
 import static org.folio.ld.dictionary.PredicateDictionary.LANGUAGE;
 import static org.folio.ld.dictionary.PredicateDictionary.TITLE;
+import static org.folio.ld.dictionary.PropertyDictionary.TERM;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.HUB;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -25,7 +26,9 @@ public class HubLabelGenerator implements LabelGenerator {
   public String getLabel(Resource resource) {
     var titleLabel = getOutgoingResourceLabel(resource, TITLE);
     var creatorLabel = getOutgoingResourceLabel(resource, CREATOR);
-    var languageLabel = getOutgoingResourceLabel(resource, LANGUAGE)
+    var languageLabel = getOutgoingEdges(resource, LANGUAGE)
+      .map(r -> getPropertyValue(r, TERM.getValue()).orElseGet(r::getLabel))
+      .findFirst()
       .or(() -> getPropertyValue(resource, PropertyDictionary.LANGUAGE.getValue()));
 
 
@@ -36,11 +39,15 @@ public class HubLabelGenerator implements LabelGenerator {
   }
 
   private Optional<String> getOutgoingResourceLabel(Resource resource, PredicateDictionary predicate) {
-    return resource.getOutgoingEdges().stream()
-      .filter(re -> re.getPredicate().equals(predicate))
-      .map(ResourceEdge::getTarget)
+    return getOutgoingEdges(resource, predicate)
       .map(Resource::getLabel)
       .findFirst();
+  }
+
+  private Stream<Resource> getOutgoingEdges(Resource resource, PredicateDictionary predicate) {
+    return resource.getOutgoingEdges().stream()
+      .filter(re -> re.getPredicate().equals(predicate))
+      .map(ResourceEdge::getTarget);
   }
 
   private Optional<String> getPropertyValue(Resource resource, String property) {
