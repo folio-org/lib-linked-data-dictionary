@@ -1,4 +1,6 @@
-## 2.0.0(IN PROGRESS)
+## v2.0.0 (IN PROGRESS)
+
+## v1.9.9 (13-02-2026)
 - Update Mapping for 300$b & $e (Physical description & Accompanying material) [MODLD-508](https://folio-org.atlassian.net/browse/MODLD-508)
 - Convert marc field 586 (Awards Note) to Resource description [MODLD-366](https://folio-org.atlassian.net/browse/MODLD-366)
 - Add properties related to marc field 545 [MODLD-337](https://folio-org.atlassian.net/browse/MODLD-337)
@@ -29,5 +31,5 @@
 - Add resource types FAST, GND, LCCSH, LCDGT, LCGFT, LCMPT, LCNAF, LCSH, MESH, VIAF and WIKIID [MODLD-939](https://folio-org.atlassian.net/browse/MODLD-939)
 - Create HubLabelGenerator to generate labels for Hubs [MODLD-970](https://folio-org.atlassian.net/browse/MODLD-970)
 
-## 1.0.1 (03-12-2025)
+## v1.0.1 (03-12-2025)
 - Initial release
