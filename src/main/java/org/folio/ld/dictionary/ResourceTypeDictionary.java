@@ -49,6 +49,7 @@ public enum ResourceTypeDictionary implements ResourceType {
   ITEM("http://bibfra.me/vocab/lite/Item"),
   JURISDICTION("http://bibfra.me/vocab/lite/Jurisdiction"),
   LANGUAGE_CATEGORY("http://bibfra.me/vocab/lite/LanguageCategory"),
+  LIGHT_RESOURCE("http://bibfra.me/vocab/lite/LightResource"),
   MEETING("http://bibfra.me/vocab/lite/Meeting"),
   MOCKED_RESOURCE("NOT_A_REAL_RESOURCE_SHOULD_BE_REPLACED_BEFORE_SAVING"),
   ORGANIZATION("http://bibfra.me/vocab/lite/Organization"),
