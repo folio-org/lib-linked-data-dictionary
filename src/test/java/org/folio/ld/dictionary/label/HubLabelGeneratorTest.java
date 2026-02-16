@@ -2,7 +2,6 @@ package org.folio.ld.dictionary.label;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.folio.ld.dictionary.PredicateDictionary;
 import org.folio.ld.dictionary.PropertyDictionary;
@@ -10,9 +9,10 @@ import org.folio.ld.dictionary.ResourceTypeDictionary;
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
 import org.junit.jupiter.api.Test;
+import tools.jackson.databind.json.JsonMapper;
 
 class HubLabelGeneratorTest {
-  private final ObjectMapper mapper = new ObjectMapper();
+  private final JsonMapper mapper = new JsonMapper();
   private final LabelGeneratorService generator = new LabelGeneratorService();
 
   @Test

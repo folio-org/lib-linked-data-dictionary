@@ -2,9 +2,6 @@ package org.folio.ld.dictionary.util;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import lombok.SneakyThrows;
 import org.folio.ld.dictionary.PredicateDictionary;
 import org.folio.ld.dictionary.PropertyDictionary;
@@ -12,6 +9,9 @@ import org.folio.ld.dictionary.ResourceTypeDictionary;
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
 import org.junit.jupiter.api.Test;
+import tools.jackson.databind.json.JsonMapper;
+import tools.jackson.databind.module.SimpleModule;
+import tools.jackson.databind.node.JsonNodeFactory;
 
 class ResourceViewDeserializerTest {
 
@@ -22,10 +22,11 @@ class ResourceViewDeserializerTest {
     var input = this.getClass().getResourceAsStream("/resource_view.json");
 
     // when
-    var om = new ObjectMapper();
     var sm = new SimpleModule();
     sm.addDeserializer(Resource.class, new ResourceViewDeserializer());
-    om.registerModule(sm);
+    var om = JsonMapper.builder()
+      .addModule(sm)
+      .build();
 
     var actualResource = om.readValue(input, Resource.class);
 

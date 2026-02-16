@@ -9,11 +9,12 @@ import static org.folio.ld.dictionary.ResourceTypeDictionary.INSTANCE;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.TITLE;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.WORK;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import org.folio.ld.dictionary.PredicateDictionary;
 import org.junit.jupiter.api.Test;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.SerializationFeature;
+import tools.jackson.databind.json.JsonMapper;
+import tools.jackson.databind.node.JsonNodeFactory;
 
 class ResourceTest {
 
@@ -90,22 +91,21 @@ class ResourceTest {
   }
 
   @Test
-  void serializationAndDeserializationTest() throws JsonProcessingException {
+  void serializationAndDeserializationTest() throws JacksonException {
     // given
-    var objectMapper = new ObjectMapper()
-      .configure(SerializationFeature.USE_EQUALITY_FOR_OBJECT_ID, true);
+    var nodeFactory = JsonNodeFactory.instance;
     var instance = new Resource()
       .setId(123L)
       .addType(INSTANCE)
       .setLabel("INSTANCE")
-      .setDoc(objectMapper.createArrayNode().add(objectMapper.createObjectNode().set(DIMENSIONS.getValue(),
-        objectMapper.createArrayNode().add("1m"))));
+      .setDoc(nodeFactory.arrayNode().add(nodeFactory.objectNode().set(DIMENSIONS.getValue(),
+        nodeFactory.arrayNode().add("1m"))));
     var title = new Resource()
       .setId(456L)
       .addType(TITLE)
       .setLabel("TITLE_LABEL")
-      .setDoc(objectMapper.createArrayNode().add(objectMapper.createObjectNode().set(MAIN_TITLE.getValue(),
-        objectMapper.createArrayNode().add("title"))));
+      .setDoc(nodeFactory.arrayNode().add(nodeFactory.objectNode().set(MAIN_TITLE.getValue(),
+        nodeFactory.arrayNode().add("title"))));
     var work = new Resource()
       .setId(789L)
       .addType(WORK)
@@ -114,13 +114,16 @@ class ResourceTest {
       .setId(456L)
       .addType(TITLE)
       .setLabel("TITLE_LABEL")
-      .setDoc(objectMapper.createArrayNode().add(objectMapper.createObjectNode().set(MAIN_TITLE.getValue(),
-        objectMapper.createArrayNode().add("title"))));
+      .setDoc(nodeFactory.arrayNode().add(nodeFactory.objectNode().set(MAIN_TITLE.getValue(),
+        nodeFactory.arrayNode().add("title"))));
     work.addOutgoingEdge(new ResourceEdge(work, title2, PredicateDictionary.TITLE));
     instance.addOutgoingEdge(new ResourceEdge(instance, title, PredicateDictionary.TITLE));
     instance.addOutgoingEdge(new ResourceEdge(instance, work, PredicateDictionary.INSTANTIATES));
 
     // when
+    var objectMapper = JsonMapper.builder()
+      .enable(SerializationFeature.USE_EQUALITY_FOR_OBJECT_ID)
+      .build();
     var serialized = objectMapper.writeValueAsString(instance);
     assertThat(serialized).containsOnlyOnce("TITLE_LABEL");
     var deserializedInstance = objectMapper.readValue(serialized, Resource.class);

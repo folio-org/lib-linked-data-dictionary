@@ -7,7 +7,6 @@ import static java.util.stream.Collectors.toCollection;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.JsonNode;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -17,6 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.folio.ld.dictionary.ResourceTypeDictionary;
+import tools.jackson.databind.JsonNode;
 
 @Data
 @NoArgsConstructor
