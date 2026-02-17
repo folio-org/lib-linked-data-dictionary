@@ -11,6 +11,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 import org.folio.ld.dictionary.PredicateDictionary;
 import org.folio.ld.dictionary.PropertyDictionary;
+import org.folio.ld.dictionary.ResourceTypeDictionary;
 import org.folio.ld.dictionary.label.LabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
@@ -24,8 +25,8 @@ public class HubLabelGenerator implements LabelGenerator {
 
   @Override
   public String getLabel(Resource resource) {
-    var titleLabel = getOutgoingResourceLabel(resource, TITLE);
-    var creatorLabel = getOutgoingResourceLabel(resource, CREATOR);
+    var titleLabel = getOutgoingResourceLabel(resource, TITLE, ResourceTypeDictionary.TITLE);
+    var creatorLabel = getOutgoingResourceLabel(resource, CREATOR, null);
     var languageLabel = getOutgoingEdges(resource, LANGUAGE)
       .map(r -> getPropertyValue(r, TERM.getValue()).orElseGet(r::getLabel))
       .findFirst()
@@ -37,8 +38,11 @@ public class HubLabelGenerator implements LabelGenerator {
       .collect(joining(". "));
   }
 
-  private Optional<String> getOutgoingResourceLabel(Resource resource, PredicateDictionary predicate) {
+  private Optional<String> getOutgoingResourceLabel(Resource resource,
+                                                    PredicateDictionary predicate,
+                                                    ResourceTypeDictionary type) {
     return getOutgoingEdges(resource, predicate)
+      .filter(r -> type == null || r.isOfType(type))
       .map(Resource::getLabel)
       .findFirst();
   }
