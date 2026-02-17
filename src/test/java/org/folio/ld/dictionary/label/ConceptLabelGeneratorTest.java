@@ -4,7 +4,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.folio.ld.dictionary.PredicateDictionary.FOCUS;
 import static org.folio.ld.dictionary.PredicateDictionary.SUB_FOCUS;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.FORM;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.INSTANCE;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.PLACE;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.TEMPORAL;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.TOPIC;
 
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
@@ -112,7 +116,7 @@ class ConceptLabelGeneratorTest {
   }
 
   @Test
-  void generateLabel_shouldGenerateLabelForConceptWithMultipleFocusAndSubFocus() {
+  void generateLabel_shouldGenerateLabelForConceptWithFocusAndMultipleSortedSubFocus() {
     // given
     var focusResource1 = new Resource()
       .setId(2L)
@@ -124,25 +128,45 @@ class ConceptLabelGeneratorTest {
 
     var subFocusResource1 = new Resource()
       .setId(4L)
-      .setLabel("SubFocus 1");
+      .setLabel("zebra")
+      .addType(FORM);
 
     var subFocusResource2 = new Resource()
       .setId(5L)
-      .setLabel("SubFocus 2");
+      .setLabel("Beta")
+      .addType(TEMPORAL);
+
+    var subFocusResource3 = new Resource()
+      .setId(6L)
+      .setLabel("alpha")
+      .addType(TEMPORAL);
+
+    var subFocusResource4 = new Resource()
+      .setId(7L)
+      .setLabel("topic-a")
+      .addType(TOPIC);
+
+    var subFocusResource5 = new Resource()
+      .setId(8L)
+      .setLabel("place-a")
+      .addType(PLACE);
 
     var concept = new Resource()
       .setId(1L)
       .addType(CONCEPT);
 
-    concept.addOutgoingEdge(new ResourceEdge(concept, focusResource1, FOCUS));
-    concept.addOutgoingEdge(new ResourceEdge(concept, focusResource2, FOCUS));
-    concept.addOutgoingEdge(new ResourceEdge(concept, subFocusResource1, SUB_FOCUS));
+    concept.addOutgoingEdge(new ResourceEdge(concept, subFocusResource5, SUB_FOCUS));
     concept.addOutgoingEdge(new ResourceEdge(concept, subFocusResource2, SUB_FOCUS));
+    concept.addOutgoingEdge(new ResourceEdge(concept, focusResource2, FOCUS));
+    concept.addOutgoingEdge(new ResourceEdge(concept, subFocusResource3, SUB_FOCUS));
+    concept.addOutgoingEdge(new ResourceEdge(concept, focusResource1, FOCUS));
+    concept.addOutgoingEdge(new ResourceEdge(concept, subFocusResource1, SUB_FOCUS));
+    concept.addOutgoingEdge(new ResourceEdge(concept, subFocusResource4, SUB_FOCUS));
 
     // when
     var label = generator.getLabel(concept);
 
     // then
-    assertThat(label).isEqualTo("Focus 1 -- Focus 2 -- SubFocus 1 -- SubFocus 2");
+    assertThat(label).isEqualTo("Focus 1 -- Focus 2 -- topic-a -- place-a -- alpha -- Beta -- zebra");
   }
 }
