@@ -77,6 +77,7 @@ public enum PropertyDictionary {
   MATERIALS_SPECIFIED("http://bibfra.me/vocab/library/materialsSpecified"),
   MISC_INFO("http://bibfra.me/vocab/library/miscInfo"),
   MARC_KEY("http://bibfra.me/vocab/bflc/marcKey"),
+  MEDIUM("http://bibfra.me/vocab/lite/medium"),
   MODIFYING_AGENCY("http://bibfra.me/vocab/library/modifyingAgency"),
   MUSIC_KEY("http://bibfra.me/vocab/library/musicKey"),
   NAME("http://bibfra.me/vocab/lite/name"),
