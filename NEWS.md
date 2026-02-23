@@ -3,6 +3,7 @@
 - Concept label generation now orders labels as FOCUS first, followed by sorted SUB_FOCUS entries [MODLD-913](https://folio-org.atlassian.net/browse/MODLD-913)
 - Update Predicate Dictionary: add IS_TRANSLATION_OF, RELATED_WORK, ADAPTED_AS_MOTION_PICTURE, SEQUEL, SEQUEL_TO and remove RELATED_TO [MODLD-1002](https://folio-org.atlassian.net/browse/MODLD-1002)
 - Fix the relation URLs to match the URLs defined in https://bibfra.me/vocab/relation [MODLD-1011](https://folio-org.atlassian.net/browse/MODLD-1011)
+- Create TitleLabelGenerator [MODLD-998](https://folio-org.atlassian.net/browse/MODLD-998)
 
 ## v1.9.9 (13-02-2026)
 - Update Mapping for 300$b & $e (Physical description & Accompanying material) [MODLD-508](https://folio-org.atlassian.net/browse/MODLD-508)

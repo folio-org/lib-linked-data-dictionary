@@ -3,6 +3,7 @@ package org.folio.ld.dictionary.label;
 import java.util.List;
 import org.folio.ld.dictionary.label.generators.ConceptLabelGenerator;
 import org.folio.ld.dictionary.label.generators.HubLabelGenerator;
+import org.folio.ld.dictionary.label.generators.TitleLabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 
 public class LabelGeneratorService {
@@ -12,7 +13,8 @@ public class LabelGeneratorService {
   public LabelGeneratorService() {
     this.generators = List.of(
       new ConceptLabelGenerator(),
-      new HubLabelGenerator()
+      new HubLabelGenerator(),
+      new TitleLabelGenerator()
     );
   }
 
