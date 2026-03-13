@@ -23,7 +23,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <lombok.version>1.18.44</lombok.version>
-    <jackson.version>3.0.4</jackson.version>
+    <jackson.version>3.1.0</jackson.version>
     <guava.version>33.5.0-jre</guava.version>
     <junit.version>6.0.3</junit.version>
     <assertj.version>3.27.7</assertj.version>
