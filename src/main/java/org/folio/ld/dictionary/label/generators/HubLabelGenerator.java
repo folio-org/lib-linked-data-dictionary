@@ -6,6 +6,7 @@ import static org.folio.ld.dictionary.PredicateDictionary.LANGUAGE;
 import static org.folio.ld.dictionary.PredicateDictionary.TITLE;
 import static org.folio.ld.dictionary.PropertyDictionary.TERM;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.HUB;
+import static org.folio.ld.dictionary.label.LabelHelper.getPropertyValue;
 
 import java.util.Optional;
 import java.util.stream.Stream;
@@ -15,7 +16,6 @@ import org.folio.ld.dictionary.ResourceTypeDictionary;
 import org.folio.ld.dictionary.label.LabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
-import tools.jackson.databind.JsonNode;
 
 public class HubLabelGenerator implements LabelGenerator {
   @Override
@@ -51,13 +51,5 @@ public class HubLabelGenerator implements LabelGenerator {
     return resource.getOutgoingEdges().stream()
       .filter(re -> re.getPredicate().equals(predicate))
       .map(ResourceEdge::getTarget);
-  }
-
-  private Optional<String> getPropertyValue(Resource resource, String property) {
-    return Optional.of(resource)
-      .map(Resource::getDoc)
-      .map(doc -> doc.get(property))
-      .map(node -> node.get(0))
-      .map(JsonNode::asString);
   }
 }
