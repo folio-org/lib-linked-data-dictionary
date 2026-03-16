@@ -193,7 +193,6 @@ public enum PredicateDictionary implements Predicate {
   GEOGRAPHIC_INFORMATION_SPECIALIST("http://bibfra.me/vocab/relation/geographicInformationSpecialist"),
   GEOSPATIAL_INFORMATION_SPECIALIST("http://bibfra.me/vocab/relation/geospatialInformationSpecialist"),
   GOVERNMENT_PUBLICATION("http://bibfra.me/vocab/library/governmentPublication"),
-  GRANTING_INSTITUTION("http://bibfra.me/vocab/library/grantingInstitution"),
   GRAPHIC_TECHNICIAN("http://bibfra.me/vocab/relation/graphicTechnician"),
   HONOREE("http://bibfra.me/vocab/relation/honoree"),
   HONOUREE("http://bibfra.me/vocab/relation/honouree"),

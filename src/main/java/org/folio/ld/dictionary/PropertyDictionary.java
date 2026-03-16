@@ -36,8 +36,6 @@ public enum PropertyDictionary {
   DESCRIPTION_SOURCE_NOTE("http://bibfra.me/vocab/library/descriptionSourceNote"),
   DIMENSIONS("http://bibfra.me/vocab/library/dimensions"),
   DISSERTATION_ID("http://bibfra.me/vocab/library/dissertationID"),
-  DISSERTATION_NOTE("http://bibfra.me/vocab/library/dissertationNote"),
-  DISSERTATION_YEAR("http://bibfra.me/vocab/library/dissertationYear"),
   EDITION("http://bibfra.me/vocab/library/edition"),
   EDITION_NUMBER("http://bibfra.me/vocab/library/editionNumber"),
   ENTITY_AND_ATTRIBUTE_INFORMATION("http://bibfra.me/vocab/library/entityAndAttributeInformation"),
