@@ -2,6 +2,7 @@ package org.folio.ld.dictionary.label;
 
 import java.util.List;
 import org.folio.ld.dictionary.label.generators.ConceptLabelGenerator;
+import org.folio.ld.dictionary.label.generators.DissertationLabelGenerator;
 import org.folio.ld.dictionary.label.generators.HubLabelGenerator;
 import org.folio.ld.dictionary.label.generators.InstanceAndWorkLabelGenerator;
 import org.folio.ld.dictionary.label.generators.TitleLabelGenerator;
@@ -14,6 +15,7 @@ public class LabelGeneratorService {
   public LabelGeneratorService() {
     this.generators = List.of(
       new ConceptLabelGenerator(),
+      new DissertationLabelGenerator(),
       new HubLabelGenerator(),
       new InstanceAndWorkLabelGenerator(),
       new TitleLabelGenerator()

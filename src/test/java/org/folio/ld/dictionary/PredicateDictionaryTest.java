@@ -217,7 +217,6 @@ class PredicateDictionaryTest {
     "http://bibfra.me/vocab/relation/geographicInformationSpecialist, -7043946637476683216",
     "http://bibfra.me/vocab/relation/geospatialInformationSpecialist, 8699953385352167166",
     "http://bibfra.me/vocab/library/governmentPublication, 5351575950727290083",
-    "http://bibfra.me/vocab/library/grantingInstitution, 7128505233054598046",
     "http://bibfra.me/vocab/relation/graphicTechnician, -2880779025977309460",
     "http://bibfra.me/vocab/relation/honoree, -8991261641829130106",
     "http://bibfra.me/vocab/relation/honouree, 2120599989808973282",
