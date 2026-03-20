@@ -5,6 +5,7 @@ import org.folio.ld.dictionary.label.generators.ConceptLabelGenerator;
 import org.folio.ld.dictionary.label.generators.DissertationLabelGenerator;
 import org.folio.ld.dictionary.label.generators.HubLabelGenerator;
 import org.folio.ld.dictionary.label.generators.InstanceAndWorkLabelGenerator;
+import org.folio.ld.dictionary.label.generators.ProviderEventLabelGenerator;
 import org.folio.ld.dictionary.label.generators.TitleLabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 
@@ -18,6 +19,7 @@ public class LabelGeneratorService {
       new DissertationLabelGenerator(),
       new HubLabelGenerator(),
       new InstanceAndWorkLabelGenerator(),
+      new ProviderEventLabelGenerator(),
       new TitleLabelGenerator()
     );
   }

@@ -54,6 +54,38 @@ class TitleLabelGeneratorTest {
     assertThat(generator.getLabel(title)).isEqualTo("Main Part Name");
   }
 
+  @Test
+  @SneakyThrows
+  void getLabel_joinsAllValuesWithinEachProperty() {
+    var title = new Resource()
+      .setId(1L)
+      .addType(TITLE)
+      .setDoc(mapper.readTree("""
+        {
+          "http://bibfra.me/vocab/library/mainTitle": ["Main", "Title"],
+          "http://bibfra.me/vocab/library/subTitle": ["Sub", "Title"]
+        }
+        """));
+
+    assertThat(generator.getLabel(title)).isEqualTo("Main Title Sub Title");
+  }
+
+  @Test
+  @SneakyThrows
+  void getLabel_trimsEachValueBeforeJoining() {
+    var title = new Resource()
+      .setId(1L)
+      .addType(TITLE)
+      .setDoc(mapper.readTree("""
+        {
+          "http://bibfra.me/vocab/library/mainTitle": ["  Main", "Title  "],
+          "http://bibfra.me/vocab/library/subTitle": ["  Sub  ", "  Title "]
+        }
+        """));
+
+    assertThat(generator.getLabel(title)).isEqualTo("Main Title Sub Title");
+  }
+
   private static Stream<ResourceTypeDictionary> supportedTitleTypes() {
     return Stream.of(TITLE, VARIANT_TITLE, PARALLEL_TITLE, ABBREVIATED_TITLE);
   }
