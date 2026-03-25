@@ -34,7 +34,7 @@ public enum PropertyDictionary {
   DATE_START("http://bibfra.me/vocab/lite/dateStart"),
   DEGREE("http://bibfra.me/vocab/library/degree"),
   DESCRIPTION_SOURCE_NOTE("http://bibfra.me/vocab/library/descriptionSourceNote"),
-  DIMENSIONS("http://bibfra.me/vocab/library/dimensions"),
+  DIMENSIONS("http://bibfra.me/vocab/lite/dimensions"),
   DISSERTATION_ID("http://bibfra.me/vocab/library/dissertationID"),
   EDITION("http://bibfra.me/vocab/library/edition"),
   EDITION_NUMBER("http://bibfra.me/vocab/library/editionNumber"),

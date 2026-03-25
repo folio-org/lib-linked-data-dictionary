@@ -6,6 +6,7 @@
 - Create TitleLabelGenerator [MODLD-998](https://folio-org.atlassian.net/browse/MODLD-998)
 - Create InstanceAndWorkLabelGenerator [MODLD-998](https://folio-org.atlassian.net/browse/MODLD-998)
 - Remove unused GRANTING_INSTITUTION, DISSERTATION_NOTE and DISSERTATION_YEAR properties. Create DissertationLabelGenerator[MODLD-1014](https://folio-org.atlassian.net/browse/MODLD-1014)
+- Correct DIMENSIONS property URI [MODLD-1024](https://folio-org.atlassian.net/browse/MODLD-1024)
 
 ## v1.9.9 (13-02-2026)
 - Update Mapping for 300$b & $e (Physical description & Accompanying material) [MODLD-508](https://folio-org.atlassian.net/browse/MODLD-508)
