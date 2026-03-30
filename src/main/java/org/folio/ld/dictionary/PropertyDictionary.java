@@ -101,7 +101,6 @@ public enum PropertyDictionary {
   RELATOR_TERM("http://bibfra.me/vocab/library/relator_term"),
   REPORT_NUMBER("http://bibfra.me/vocab/library/reportNumber"),
   REPRODUCTION_NOTE("http://bibfra.me/vocab/library/reproductionNote"),
-  RESOURCE_PREFERRED("http://library.link/vocab/resourcePreferred"),
   SCALE_NOTE("http://bibfra.me/vocab/library/scaleNote"),
   SERIES_STATEMENT("http://bibfra.me/vocab/library/seriesStatement"),
   SIMPLE_PLACE("http://bibfra.me/vocab/lite/place"),
