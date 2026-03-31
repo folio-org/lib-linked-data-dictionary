@@ -1,6 +1,9 @@
 package org.folio.ld.dictionary.label;
 
+import static java.util.stream.Collectors.joining;
+
 import java.util.Optional;
+import java.util.stream.StreamSupport;
 import lombok.experimental.UtilityClass;
 import org.folio.ld.dictionary.model.Resource;
 import tools.jackson.databind.JsonNode;
@@ -11,7 +14,9 @@ public class LabelHelper {
     return Optional.of(resource)
       .map(Resource::getDoc)
       .map(doc -> doc.get(property))
-      .map(node -> node.get(0))
-      .map(JsonNode::asString);
+      .map(node -> StreamSupport.stream(node.spliterator(), false)
+        .map(JsonNode::asString)
+        .map(String::trim)
+        .collect(joining(" ")));
   }
 }
