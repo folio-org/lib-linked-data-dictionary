@@ -4,10 +4,12 @@ import static java.util.Optional.ofNullable;
 
 import com.google.common.collect.ImmutableMap;
 import java.util.Optional;
+import java.util.regex.Pattern;
 import org.folio.ld.dictionary.PredicateDictionary;
 
 public final class RoleLabelDictionary {
   private static final String EMPTY = "";
+  private static final Pattern NON_ALPHA_PATTERN = Pattern.compile("[^a-zA-Z]");
 
   private static final ImmutableMap<String, PredicateDictionary> VALUE_MAP =
     new ImmutableMap.Builder<String, PredicateDictionary>()
@@ -341,7 +343,8 @@ public final class RoleLabelDictionary {
   }
 
   private static String normalize(String text) {
-    return text.replaceAll("[^a-zA-Z]", EMPTY)
+    return NON_ALPHA_PATTERN.matcher(text)
+      .replaceAll(EMPTY)
       .toLowerCase();
   }
 }
