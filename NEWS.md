@@ -1,4 +1,6 @@
-## v2.0.0 (IN PROGRESS)
+## v3.0.0 (IN PROGRESS)
+
+## v2.0.0 (17-04-2026)
 - Add LIGHT_RESOURCE type [MODLD-980](https://folio-org.atlassian.net/browse/MODLD-980)
 - Concept label generation now orders labels as FOCUS first, followed by sorted SUB_FOCUS entries [MODLD-913](https://folio-org.atlassian.net/browse/MODLD-913)
 - Update Predicate Dictionary: add IS_TRANSLATION_OF, RELATED_WORK, ADAPTED_AS_MOTION_PICTURE, SEQUEL, SEQUEL_TO and remove RELATED_TO [MODLD-1002](https://folio-org.atlassian.net/browse/MODLD-1002)
