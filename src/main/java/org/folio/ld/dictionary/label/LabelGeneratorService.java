@@ -3,10 +3,19 @@ package org.folio.ld.dictionary.label;
 import java.util.List;
 import org.folio.ld.dictionary.label.generators.ConceptLabelGenerator;
 import org.folio.ld.dictionary.label.generators.DissertationLabelGenerator;
+import org.folio.ld.dictionary.label.generators.FamilyLabelGenerator;
+import org.folio.ld.dictionary.label.generators.FormLabelGenerator;
 import org.folio.ld.dictionary.label.generators.HubLabelGenerator;
 import org.folio.ld.dictionary.label.generators.InstanceAndWorkLabelGenerator;
+import org.folio.ld.dictionary.label.generators.JurisdictionLabelGenerator;
+import org.folio.ld.dictionary.label.generators.MeetingLabelGenerator;
+import org.folio.ld.dictionary.label.generators.OrganizationLabelGenerator;
+import org.folio.ld.dictionary.label.generators.PersonLabelGenerator;
+import org.folio.ld.dictionary.label.generators.PlaceLabelGenerator;
 import org.folio.ld.dictionary.label.generators.ProviderEventLabelGenerator;
+import org.folio.ld.dictionary.label.generators.TemporalLabelGenerator;
 import org.folio.ld.dictionary.label.generators.TitleLabelGenerator;
+import org.folio.ld.dictionary.label.generators.TopicLabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 
 public class LabelGeneratorService {
@@ -20,7 +29,16 @@ public class LabelGeneratorService {
       new HubLabelGenerator(),
       new InstanceAndWorkLabelGenerator(),
       new ProviderEventLabelGenerator(),
-      new TitleLabelGenerator()
+      new TitleLabelGenerator(),
+      new FamilyLabelGenerator(),
+      new FormLabelGenerator(),
+      new JurisdictionLabelGenerator(),
+      new MeetingLabelGenerator(),
+      new OrganizationLabelGenerator(),
+      new PersonLabelGenerator(),
+      new PlaceLabelGenerator(),
+      new TemporalLabelGenerator(),
+      new TopicLabelGenerator()
     );
   }
 

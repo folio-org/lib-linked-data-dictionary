@@ -1,0 +1,35 @@
+package org.folio.ld.dictionary.label.generators;
+
+import static java.util.stream.Collectors.joining;
+import static org.folio.ld.dictionary.PropertyDictionary.DATE;
+import static org.folio.ld.dictionary.PropertyDictionary.NAME;
+import static org.folio.ld.dictionary.PropertyDictionary.PLACE;
+import static org.folio.ld.dictionary.PropertyDictionary.SUBORDINATE_UNIT;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.ORGANIZATION;
+import static org.folio.ld.dictionary.label.LabelHelper.getPropertyValue;
+
+import java.util.Optional;
+import java.util.stream.Stream;
+import org.folio.ld.dictionary.label.LabelGenerator;
+import org.folio.ld.dictionary.model.Resource;
+
+public class OrganizationLabelGenerator implements LabelGenerator {
+
+  @Override
+  public boolean supports(Resource resource) {
+    return resource.isOfType(ORGANIZATION);
+  }
+
+  @Override
+  public String getLabel(Resource resource) {
+    return Stream.of(
+        getPropertyValue(resource, NAME.getValue()),
+        getPropertyValue(resource, SUBORDINATE_UNIT.getValue()),
+        getPropertyValue(resource, PLACE.getValue()),
+        getPropertyValue(resource, DATE.getValue())
+      )
+      .filter(Optional::isPresent)
+      .map(Optional::get)
+      .collect(joining(", "));
+  }
+}
