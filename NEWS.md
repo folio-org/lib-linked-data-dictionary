@@ -1,4 +1,5 @@
 ## v3.0.0 (IN PROGRESS)
+- Label generators for authorities types [MODLD-1082](https://folio-org.atlassian.net/browse/MODLD-1082)
 
 ## v2.0.0 (17-04-2026)
 - Add LIGHT_RESOURCE type [MODLD-980](https://folio-org.atlassian.net/browse/MODLD-980)
