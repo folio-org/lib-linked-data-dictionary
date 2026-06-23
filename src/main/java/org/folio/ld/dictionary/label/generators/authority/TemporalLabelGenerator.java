@@ -1,17 +1,18 @@
-package org.folio.ld.dictionary.label.generators;
+package org.folio.ld.dictionary.label.generators.authority;
 
 import static org.folio.ld.dictionary.PropertyDictionary.NAME;
-import static org.folio.ld.dictionary.ResourceTypeDictionary.FORM;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.TEMPORAL;
 import static org.folio.ld.dictionary.label.LabelHelper.getPropertyValue;
 
 import org.folio.ld.dictionary.label.LabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 
-public class FormLabelGenerator implements LabelGenerator {
+public class TemporalLabelGenerator implements LabelGenerator {
 
   @Override
   public boolean supports(Resource resource) {
-    return resource.isOfType(FORM);
+    return resource.isOfType(TEMPORAL) && resource.isNotOfType(CONCEPT);
   }
 
   @Override

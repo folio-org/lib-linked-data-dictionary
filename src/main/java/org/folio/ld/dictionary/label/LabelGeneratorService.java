@@ -1,21 +1,21 @@
 package org.folio.ld.dictionary.label;
 
 import java.util.List;
-import org.folio.ld.dictionary.label.generators.ConceptLabelGenerator;
 import org.folio.ld.dictionary.label.generators.DissertationLabelGenerator;
-import org.folio.ld.dictionary.label.generators.FamilyLabelGenerator;
-import org.folio.ld.dictionary.label.generators.FormLabelGenerator;
 import org.folio.ld.dictionary.label.generators.HubLabelGenerator;
 import org.folio.ld.dictionary.label.generators.InstanceAndWorkLabelGenerator;
-import org.folio.ld.dictionary.label.generators.JurisdictionLabelGenerator;
-import org.folio.ld.dictionary.label.generators.MeetingLabelGenerator;
-import org.folio.ld.dictionary.label.generators.OrganizationLabelGenerator;
-import org.folio.ld.dictionary.label.generators.PersonLabelGenerator;
-import org.folio.ld.dictionary.label.generators.PlaceLabelGenerator;
 import org.folio.ld.dictionary.label.generators.ProviderEventLabelGenerator;
-import org.folio.ld.dictionary.label.generators.TemporalLabelGenerator;
 import org.folio.ld.dictionary.label.generators.TitleLabelGenerator;
-import org.folio.ld.dictionary.label.generators.TopicLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.ConceptLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.FamilyLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.FormLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.JurisdictionLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.MeetingLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.OrganizationLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.PersonLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.PlaceLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.TemporalLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.TopicLabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 
 public class LabelGeneratorService {

@@ -1,11 +1,12 @@
 package org.folio.ld.dictionary.label;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.MEETING;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.PERSON;
 
 import lombok.SneakyThrows;
-import org.folio.ld.dictionary.label.generators.MeetingLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.MeetingLabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.json.JsonMapper;
@@ -20,6 +21,13 @@ class MeetingLabelGeneratorTest {
     var meeting = new Resource().setId(1L).addType(MEETING);
 
     assertThat(generator.supports(meeting)).isTrue();
+  }
+
+  @Test
+  void supports_returnsFalse_forConcept() {
+    var concept = new Resource().setId(1L).addType(MEETING).addType(CONCEPT);
+
+    assertThat(generator.supports(concept)).isFalse();
   }
 
   @Test

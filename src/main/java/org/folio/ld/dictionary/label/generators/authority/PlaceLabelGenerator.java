@@ -1,7 +1,8 @@
-package org.folio.ld.dictionary.label.generators;
+package org.folio.ld.dictionary.label.generators.authority;
 
 import static org.folio.ld.dictionary.PropertyDictionary.CODE;
 import static org.folio.ld.dictionary.PropertyDictionary.NAME;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.PLACE;
 import static org.folio.ld.dictionary.label.LabelHelper.getPropertyValue;
 
@@ -12,7 +13,7 @@ public class PlaceLabelGenerator implements LabelGenerator {
 
   @Override
   public boolean supports(Resource resource) {
-    return resource.isOfType(PLACE);
+    return resource.isOfType(PLACE) && resource.isNotOfType(CONCEPT);
   }
 
   @Override

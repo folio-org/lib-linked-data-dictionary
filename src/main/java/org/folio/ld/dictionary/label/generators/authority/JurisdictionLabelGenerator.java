@@ -1,11 +1,12 @@
-package org.folio.ld.dictionary.label.generators;
+package org.folio.ld.dictionary.label.generators.authority;
 
 import static java.util.stream.Collectors.joining;
 import static org.folio.ld.dictionary.PropertyDictionary.DATE;
 import static org.folio.ld.dictionary.PropertyDictionary.NAME;
 import static org.folio.ld.dictionary.PropertyDictionary.PLACE;
 import static org.folio.ld.dictionary.PropertyDictionary.SUBORDINATE_UNIT;
-import static org.folio.ld.dictionary.ResourceTypeDictionary.MEETING;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.JURISDICTION;
 import static org.folio.ld.dictionary.label.LabelHelper.getPropertyValue;
 
 import java.util.Optional;
@@ -13,20 +14,20 @@ import java.util.stream.Stream;
 import org.folio.ld.dictionary.label.LabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 
-public class MeetingLabelGenerator implements LabelGenerator {
+public class JurisdictionLabelGenerator implements LabelGenerator {
 
   @Override
   public boolean supports(Resource resource) {
-    return resource.isOfType(MEETING);
+    return resource.isOfType(JURISDICTION) && resource.isNotOfType(CONCEPT);
   }
 
   @Override
   public String getLabel(Resource resource) {
     return Stream.of(
         getPropertyValue(resource, NAME.getValue()),
-        getPropertyValue(resource, DATE.getValue()),
+        getPropertyValue(resource, SUBORDINATE_UNIT.getValue()),
         getPropertyValue(resource, PLACE.getValue()),
-        getPropertyValue(resource, SUBORDINATE_UNIT.getValue())
+        getPropertyValue(resource, DATE.getValue())
       )
       .filter(Optional::isPresent)
       .map(Optional::get)
