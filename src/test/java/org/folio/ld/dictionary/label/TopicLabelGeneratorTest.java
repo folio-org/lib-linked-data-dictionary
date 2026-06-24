@@ -1,11 +1,12 @@
 package org.folio.ld.dictionary.label;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.PERSON;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.TOPIC;
 
 import lombok.SneakyThrows;
-import org.folio.ld.dictionary.label.generators.TopicLabelGenerator;
+import org.folio.ld.dictionary.label.generators.authority.TopicLabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.json.JsonMapper;
@@ -20,6 +21,13 @@ class TopicLabelGeneratorTest {
     var topic = new Resource().setId(1L).addType(TOPIC);
 
     assertThat(generator.supports(topic)).isTrue();
+  }
+
+  @Test
+  void supports_returnsFalse_forConcept() {
+    var concept = new Resource().setId(1L).addType(TOPIC).addType(CONCEPT);
+
+    assertThat(generator.supports(concept)).isFalse();
   }
 
   @Test

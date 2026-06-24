@@ -1,6 +1,6 @@
 ## v3.0.0 (IN PROGRESS)
 - Base64Url hash method introduced [MODLD-1087](https://folio-org.atlassian.net/browse/MODLD-1087)
-- Label generators for authorities types [MODLD-1082](https://folio-org.atlassian.net/browse/MODLD-1082)
+- Label generators for non-concept authority types [MODLD-1082](https://folio-org.atlassian.net/browse/MODLD-1082)
 - ResourceKind introduced [MODLD-1099](https://folio-org.atlassian.net/browse/MODLD-1099)
 
 ## v2.0.0 (17-04-2026)

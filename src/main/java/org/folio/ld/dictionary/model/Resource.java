@@ -56,6 +56,10 @@ public class Resource {
     return this;
   }
 
+  public boolean isNotOfType(ResourceTypeDictionary type) {
+    return getTypes().stream().noneMatch(at -> at.getUri().equals(type.getUri()));
+  }
+
   public boolean isOfType(ResourceTypeDictionary type) {
     return getTypes().stream().anyMatch(at -> at.getUri().equals(type.getUri()));
   }

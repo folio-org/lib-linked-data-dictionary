@@ -1,11 +1,12 @@
-package org.folio.ld.dictionary.label.generators;
+package org.folio.ld.dictionary.label.generators.authority;
 
 import static java.util.stream.Collectors.joining;
 import static org.folio.ld.dictionary.PropertyDictionary.DATE;
 import static org.folio.ld.dictionary.PropertyDictionary.NAME;
 import static org.folio.ld.dictionary.PropertyDictionary.PLACE;
 import static org.folio.ld.dictionary.PropertyDictionary.SUBORDINATE_UNIT;
-import static org.folio.ld.dictionary.ResourceTypeDictionary.JURISDICTION;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.ORGANIZATION;
 import static org.folio.ld.dictionary.label.LabelHelper.getPropertyValue;
 
 import java.util.Optional;
@@ -13,11 +14,11 @@ import java.util.stream.Stream;
 import org.folio.ld.dictionary.label.LabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 
-public class JurisdictionLabelGenerator implements LabelGenerator {
+public class OrganizationLabelGenerator implements LabelGenerator {
 
   @Override
   public boolean supports(Resource resource) {
-    return resource.isOfType(JURISDICTION);
+    return resource.isOfType(ORGANIZATION) && resource.isNotOfType(CONCEPT);
   }
 
   @Override

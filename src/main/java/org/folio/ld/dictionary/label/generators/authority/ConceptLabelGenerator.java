@@ -1,4 +1,4 @@
-package org.folio.ld.dictionary.label.generators;
+package org.folio.ld.dictionary.label.generators.authority;
 
 import static java.lang.String.CASE_INSENSITIVE_ORDER;
 import static org.folio.ld.dictionary.PredicateDictionary.FOCUS;

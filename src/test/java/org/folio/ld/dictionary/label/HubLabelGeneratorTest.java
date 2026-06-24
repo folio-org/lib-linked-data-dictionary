@@ -5,6 +5,7 @@ import static org.folio.ld.dictionary.PredicateDictionary.CREATOR;
 import static org.folio.ld.dictionary.PredicateDictionary.LANGUAGE;
 import static org.folio.ld.dictionary.PredicateDictionary.TITLE;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.ABBREVIATED_TITLE;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.HUB;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.JURISDICTION;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.LANGUAGE_CATEGORY;
@@ -16,6 +17,7 @@ import lombok.SneakyThrows;
 import org.folio.ld.dictionary.PredicateDictionary;
 import org.folio.ld.dictionary.PropertyDictionary;
 import org.folio.ld.dictionary.ResourceTypeDictionary;
+import org.folio.ld.dictionary.label.generators.HubLabelGenerator;
 import org.folio.ld.dictionary.model.Resource;
 import org.folio.ld.dictionary.model.ResourceEdge;
 import org.junit.jupiter.api.Test;
@@ -23,7 +25,7 @@ import tools.jackson.databind.json.JsonMapper;
 
 class HubLabelGeneratorTest {
   private final JsonMapper mapper = new JsonMapper();
-  private final LabelGeneratorService generator = new LabelGeneratorService();
+  private final HubLabelGenerator generator = new HubLabelGenerator();
 
   @Test
   void getLabelUsesOnlyPrimaryTitleFromOutgoingEdges() {
@@ -67,6 +69,13 @@ class HubLabelGeneratorTest {
 
     assertThat(generator.getLabel(hub))
       .isEqualTo("Creator Name. The Title. German");
+  }
+
+  @Test
+  void supports_returnsFalse_forConcept() {
+    var concept = new Resource().setId(1L).addType(HUB).addType(CONCEPT);
+
+    assertThat(generator.supports(concept)).isFalse();
   }
 
   private ResourceEdge edge(Resource source,

@@ -5,6 +5,7 @@ import static org.folio.ld.dictionary.PredicateDictionary.CREATOR;
 import static org.folio.ld.dictionary.PredicateDictionary.LANGUAGE;
 import static org.folio.ld.dictionary.PredicateDictionary.TITLE;
 import static org.folio.ld.dictionary.PropertyDictionary.TERM;
+import static org.folio.ld.dictionary.ResourceTypeDictionary.CONCEPT;
 import static org.folio.ld.dictionary.ResourceTypeDictionary.HUB;
 import static org.folio.ld.dictionary.label.LabelHelper.getPropertyValue;
 
@@ -20,7 +21,7 @@ import org.folio.ld.dictionary.model.ResourceEdge;
 public class HubLabelGenerator implements LabelGenerator {
   @Override
   public boolean supports(Resource resource) {
-    return resource.isOfType(HUB);
+    return resource.isOfType(HUB) && resource.isNotOfType(CONCEPT);
   }
 
   @Override
