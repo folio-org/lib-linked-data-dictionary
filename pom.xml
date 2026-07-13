@@ -25,7 +25,7 @@
     <lombok.version>1.18.46</lombok.version>
     <jackson.version>3.2.0</jackson.version>
     <guava.version>33.6.0-jre</guava.version>
-    <junit.version>6.1.1</junit.version>
+    <junit.version>6.1.2</junit.version>
     <assertj.version>3.27.7</assertj.version>
     <checkstyle.version>13.7.0</checkstyle.version>
 
