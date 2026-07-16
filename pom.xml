@@ -23,11 +23,11 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <lombok.version>1.18.46</lombok.version>
-    <jackson.version>3.2.0</jackson.version>
+    <jackson.version>3.2.1</jackson.version>
     <guava.version>33.6.0-jre</guava.version>
-    <junit.version>6.1.1</junit.version>
+    <junit.version>6.1.2</junit.version>
     <assertj.version>3.27.7</assertj.version>
-    <checkstyle.version>13.7.0</checkstyle.version>
+    <checkstyle.version>13.8.0</checkstyle.version>
 
     <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
     <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
